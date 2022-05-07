@@ -1,0 +1,31 @@
+{
+  "name": "frontend.pe",
+  "version": "1.0.0",
+  "description": "Web de la comunidad",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frontendpe/frontend.pe.git"
+  },
+  "keywords": [
+    "frontend"
+  ],
+  "author": "eporroa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/frontendpe/frontend.pe/issues"
+  },
+  "homepage": "https://github.com/frontendpe/frontend.pe#readme",
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "bootstrap": "^5.1.3",
+    "postcss-cli": "^9.1.0",
+    "standard": "^17.0.0"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.13"
+  }
+}
