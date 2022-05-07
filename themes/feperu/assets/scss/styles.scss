@@ -1,6 +1,7 @@
-@import "../../../../node_modules/bootstrap/scss/bootstrap";
+@import "custom-bootstrap";
 
-$test_color: #2ec7be;
+// $test_color: (#00FF00;
+$test_color: var(--bs-danger);
 
 h1 {
   color: $test_color;
