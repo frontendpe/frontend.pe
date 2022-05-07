@@ -1,0 +1,13 @@
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
+
+$test_color: #2ec7be;
+
+h1 {
+  color: $test_color;
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  padding: 0 5px;
+
+  @include media-breakpoint-down(sm) {
+    color: red;
+  }
+}
