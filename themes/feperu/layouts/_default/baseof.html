@@ -5,6 +5,7 @@
 <body>
   {{- partial "header.html" . -}}
   {{- block "main" . }}{{- end }}
+  {{ .Content }}
   {{- partial "footer.html" . -}}
 </body>
 

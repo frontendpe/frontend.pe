@@ -1,4 +1,4 @@
-baseURL = 'https://frontendpe.github.io/frontend.pe/'
+baseURL = 'https://frontend.pe/'
 languageCode = 'es-pe'
 title = 'Frontend.pe'
 theme = "feperu"
