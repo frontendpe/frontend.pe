@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "hugo server",
-    "build": "hugo",
+    "build": "hugo --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
