@@ -1,4 +1,4 @@
-baseURL = 'https://frontend.pe/'
+baseURL = 'https://frontendpe.org'
 languageCode = 'es-pe'
 title = 'Frontend.pe'
 theme = "feperu"
