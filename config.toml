@@ -1,4 +1,64 @@
-baseURL = 'https://frontend.pe/'
-languageCode = 'es-pe'
-title = 'Frontend.pe'
-theme = "feperu"
+baseURL = "/"
+languageCode = "en-us"
+title = "Frontend.pe"
+theme = "frontendpe-blog"
+enableGitInfo = false
+pygmentsCodeFences = true
+pygmentsCodefencesGuessSyntax = true
+pygmentsUseClasses = true
+metaDataFormat = "yaml"
+paginate = 3
+
+[params]
+  google_analytics_id = ""
+
+  [params.homepage]
+    postLimit = 6
+    
+  [params.logo]
+    showLogoTextOnDesktop = true
+    showLogoTextOnMobile = true
+    showLogoImageOnDesktop = true
+    showLogoImageOnMobile = true
+    logoDesktopText = "Frontend.pe"
+    logoDesktopImage = "images/logo/logo.svg"
+    logoMobileText = ""
+    logoMobileImage = "images/logo/logo.svg"
+    logoDesktopImageHeight = 32
+    logoDesktopImageWidth = 32
+    logoMobileImageHeight = 32
+    logoMobileImageWidth = 32
+
+  [params.fonts]
+    google_fonts = "https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;600&display=swap"
+    heading = "Inconsolata"
+    base = "Inconsolata"
+    monospace = "Fira Mono"
+
+[build]
+  writeStats = true
+
+[permalinks]
+    posts = "blog/:year/:month/:title/"
+    pages = ":slug/"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    author = "authors"
+  
+# Main Menu
+[[menu.main]]
+    name = "Inicio"
+    url = "/"
+    weight = 1
+
+[[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 2
+
+[[menu.main]]
+    name = "Acerca de Frontend.pe"
+    url = "/about/"
+    weight = 3

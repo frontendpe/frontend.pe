@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+{{ partial "heading/heading.html" (dict "title" .Params.heading.title "description" .Params.heading.description "align"
+.Params.heading.align "date" .Params.heading.date)}}
+
+<main class="py-6">
+    {{ $paginator := .Paginate (where .Pages "Type" "posts") }}
+    {{ range $paginator.Pages }}
+    <div class="mb-12">
+        {{ partial "blog/post-row.html" (dict
+        "title" .Params.title
+        "date" .Params.date
+        "description" .Params.description
+        "thumbnail" .Params.thumbnail
+        "author" .Params.author
+        "tags" .Params.tags
+        "categories" .Params.categories
+        "url" .Permalink
+        )}}
+    </div>
+    {{ end }}
+</main>
+
+{{ partial "paginator/paginator.html" . }}
+
+{{ end }}

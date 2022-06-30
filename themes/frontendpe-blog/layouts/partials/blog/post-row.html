@@ -1,0 +1,43 @@
+{{ $title := .title }}
+{{ $description := .description }}
+{{ $thumbnail := .thumbnail }}
+{{ $url := .url }}
+{{ $author := .author }}
+{{ $date := .date }}
+{{ $categories := .categories }}
+
+<div class="flex flex-col md:flex-row w-full lg:w-10/12">
+
+  {{ if $thumbnail }}
+    <div class="md:mr-4 mb-2 md:mb-0 md:w-4/12 ">
+      <a class="bg-gray-100" href="{{ $url | relURL }}">
+        <img width="640" height="360" class="rounded mb-3 hover:opacity-70 transition duration-300 ease-in-out" alt="{{ $title }}" src="{{ $thumbnail | relURL }}"/></a>
+    </div>
+  {{ end }}
+
+  <div class="flex-1">
+    <div class="flex items-center">
+      {{ with $author }}
+      <div class="flex ml-4">
+         {{ partial "author/author.html" (dict  "name" .name "image" .image "showName" .showName )}}
+      </div>
+      {{ end }}
+      {{ partial "date/date.html" (dict  "date" $date )}}
+    </div>
+
+    <a href="{{ $url | relURL }}" class="hover:text-blue-400">
+      <h2 class="text-2xl font-semibold mb-1">{{ $title }}</h2>
+    </a>
+
+    <p class="text-base font-light text-gray-600 mb-4">{{ $description }}</p>
+
+    {{ if $categories }}
+        <div class="mb-2">
+        {{ range $categories }}
+            {{ partial "categories/category.html" . }}
+        {{ end }}
+      </div>
+    {{ end }}
+
+  </div>
+</div>

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .heading strong {
+        @apply text-gray-600 mb-2;
+        font-weight: inherit;
+        font-style: normal;
+    }
+    .logo h2 strong {
+        @apply text-gray-600 mb-2;
+        font-weight: inherit;
+        font-style: normal;
+    }
+}

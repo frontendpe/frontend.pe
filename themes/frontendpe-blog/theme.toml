@@ -1,0 +1,17 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Frontend.pe blog"
+license = "MIT"
+licenselink = "https://github.com/frontendpe/frontend.pe/blob/main/themes/feperu/LICENSE"
+description = "A Hugo Tailwind 3 blog theme"
+
+homepage = "https://frontend.pe"
+min_version = "0.92.2"
+
+tags = ["blog", "tailwind", "minimal", "zerostatic"]
+features = ["blog"]
+
+[author]
+  name = "Erik Porroa"
+  homepage = "http://frontend.pe"
