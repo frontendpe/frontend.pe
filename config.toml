@@ -1,5 +1,5 @@
 baseURL = "/"
-languageCode = "en-us"
+languageCode = 'es-pe'
 title = "Frontend.pe"
 theme = "frontendpe-blog"
 enableGitInfo = false
