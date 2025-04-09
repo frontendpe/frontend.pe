@@ -1,1 +1,25 @@
 @import "tailwindcss";
+
+@layer base {
+
+    :root{
+        scroll-behavior: smooth;
+
+        --nav-text: #633C77;
+        --background: #211421;
+        --nav-bg: #38FFE8;
+        --texto: #FFFFFF;
+        --frontend: #F9F051;
+    
+    }
+}
+
+
+@theme {
+    --color-background: var(--background);
+    --color-frontend: var(--frontend);
+    --color-nav-bg: var(--nav-bg);
+    --color-nav-text: var(--nav-text);
+    --color-texto: var(--texto);
+
+}
