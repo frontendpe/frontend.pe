@@ -2,7 +2,7 @@
 
 @layer base {
 
-    :root{
+    :root {
         scroll-behavior: smooth;
 
         --nav-text: #633C77;
@@ -10,7 +10,9 @@
         --nav-bg: #38FFE8;
         --texto: #FFFFFF;
         --frontend: #F9F051;
-    
+        --secondary:#B56EE1;
+        --text-secundary:#8F8F8F;
+
     }
 }
 
@@ -21,5 +23,8 @@
     --color-nav-bg: var(--nav-bg);
     --color-nav-text: var(--nav-text);
     --color-texto: var(--texto);
+    --color-secondary: var(--secondary);
+    --color-text-secundary: var(--text-secundary);
+
 
 }

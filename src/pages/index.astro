@@ -1,55 +1,55 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import "../styles/global.css";
-import Nav from "../components/Nav.astro";
-import banner from "../assets/banner.png";
-import construccion from "../assets/construccion.png";
-import background from "../assets/BACGROUND.png";
-import obj1 from "../assets/Group 2.svg";
-import obj2 from "../assets/Capa_1.svg";
-import obj3 from "../assets/Capa_2.svg";
+import Layout from '../layouts/Layout.astro';
+import '../styles/global.css';
+import Nav from '../components/Nav.astro';
+import banner from '../assets/banner.png';
+import construccion from '../assets/construccion.png';
+import background from '../assets/background.png';
+import obj1 from '../assets/Group 2.svg';
+import obj2 from '../assets/Capa_1.svg';
+import obj3 from '../assets/Capa_2.svg';
+import fond2 from '../assets/fondo2.png';
+import foto from '../assets/meetups_foto.png';
 ---
 
 <Layout>
   <main
-    class="bg-background text-texto font-sans min-h-screen flex flex-col gap-12"
+    class="bg-background text-texto font-sans min-h-screen flex flex-col gap-8"
   >
     <Nav />
 
+    <!-- Inicio -->
     <section
       id="inicio"
-      class="flex flex-col items-center text-center pt-40 gap-10 px-6 md:px-6 py-6"
+      class="flex flex-col items-center text-center pt-40 gap-8 px-6 py-8"
     >
-      <h2 class="text-nav-bg text-sm md:text-base tracking-widest">
-        EL FUTURO SE PROGRAMA LÍNEA POR LÍNEA.
+      <h2 class="text-nav-bg md:text-base tracking-widest uppercase">
+        el futuro se programa línea por línea.
       </h2>
       <a
         href="#nosotros"
-        class="bg-nav-bg text-nav-text text-sm font-bold px-6 py-3 rounded-full transition duration-300 hover:bg-nav-text hover:text-nav-bg"
+        class="bg-nav-bg text-nav-text font-bold px-6 py-3 rounded-full transition duration-300 hover:bg-nav-text hover:text-nav-bg uppercase"
       >
-        HAZLO POSIBLE
+        hazlo posible
       </a>
-
-      <!-- Banner -->
-      <section class="flex w-full">
+      <div class="w-full">
         <img
           src={banner.src}
-          alt="Banner"
           class="w-full object-contain md:object-cover object-center"
         />
-      </section>
+      </div>
     </section>
 
     <!-- Nosotros -->
     <section
       id="nosotros"
-      class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto px-6 md:px-6 py-6 min-h-screen"
+      class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto px-6 py-16"
     >
-      <img src={construccion.src} alt="Ilustración" class="w-72 md:w-[420px]" />
+      <img src={construccion.src} class="w-72 md:w-[420px]" />
       <div class="max-w-lg text-center md:text-left">
-        <h3 class="text-3xl font-bold text-nav-bg mb-4">¿Quiénes Somos?</h3>
-        <p class="text-lg leading-relaxed text-texto mb-6 font-semibold ">
-          FRONTEND nace con el compromiso de fortalecer el ecosistema del
+        <h3 class="text-3xl font-bold text-nav-bg mb-4">¿Quiénes somos?</h3>
+        <p class="leading-relaxed text-texto mb-6 font-semibold">
+          Frontend nace con el compromiso de fortalecer el ecosistema del
           desarrollo de software en el Perú, integrando la cultura del Perú con
           la innovación tecnológica. Queremos representar el crecimiento digital
           del país sin perder nuestras raíces, inspirándonos en los elementos
@@ -57,36 +57,35 @@ import obj3 from "../assets/Capa_2.svg";
         </p>
         <a
           href="/"
-          class="border-2 border-nav-bg px-5 py-2 rounded-full text-nav-bg font-bold hover:bg-nav-bg hover:text-background transition"
+          class="border-2 border-nav-bg px-5 py-2 rounded-full text-nav-bg font-bold hover:bg-nav-bg hover:text-background transition uppercase"
         >
-          FORMAR PARTE
+          formar parte
         </a>
       </div>
     </section>
 
     <!-- Objetivos -->
     <section
-      class="flex flex-col relative justify-center items-center gap-10 w-full overflow-hidden min-h-screen"
+      class="flex flex-col relative justify-center items-center gap-10 w-full overflow-hidden py-16"
     >
       <img
         src={background.src}
-        alt="Fondo decorativo"
         class="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
-      <div class="relative z-10 flex flex-col items-center text-center p-6 c">
-        <h3 class="text-4xl font-bold text-texto mb-16">Nuestros Objetivos</h3>
+      <div class="relative z-10 flex flex-col items-center text-center p-6">
+        <h3 class="text-3xl font-bold text-texto mb-10">Nuestros objetivos</h3>
         <div
-          class="flex flex-col md:flex-row gap-12 md:gap-16 justify-center items-stretch max-w-5xlf"
+          class="flex flex-col md:flex-row gap-10 md:gap-8 justify-center items-stretch max-w-5xl"
         >
           <!-- Objetivo 1 -->
           <div class="flex flex-col items-center text-center">
             <div
               class="bg-nav-bg p-4 rounded-xl mb-4 flex items-center justify-center"
             >
-              <img src={obj1.src} alt="Difusión" class="w-16 h-16" />
+              <img src={obj1.src} class="w-16 h-16" />
             </div>
-            <p class="text-lg text-texto font-semibold leading-relaxed">
-              Difundir las tecnologías Web Front-end en el ámbito tecnológico y
+            <p class="text-texto font-semibold leading-relaxed">
+              Difundir las tecnologías web front-end en el ámbito tecnológico y
               emprendimientos a nivel nacional.
             </p>
           </div>
@@ -96,9 +95,9 @@ import obj3 from "../assets/Capa_2.svg";
             <div
               class="bg-nav-bg p-4 rounded-xl mb-4 flex items-center justify-center"
             >
-              <img src={obj2.src} alt="Herramientas" class="w-16 h-16" />
+              <img src={obj2.src} class="w-16 h-16" />
             </div>
-            <p class="text-lg text-texto font-semibold leading-relaxed">
+            <p class="text-texto font-semibold leading-relaxed">
               Permitir a los profesionales y emprendedores del país el
               desarrollo de sus actividades usando herramientas y procedimientos
               actuales.
@@ -110,9 +109,9 @@ import obj3 from "../assets/Capa_2.svg";
             <div
               class="bg-nav-bg p-4 rounded-xl mb-4 flex items-center justify-center"
             >
-              <img src={obj3.src} alt="Contribución" class="w-16 h-16" />
+              <img src={obj3.src} class="w-16 h-16" />
             </div>
-            <p class="text-lg text-texto font-semibold leading-relaxed">
+            <p class="text-texto font-semibold leading-relaxed">
               Contribuir con nuestra sociedad en compartir conocimiento,
               emprendimiento, tecnología y networking.
             </p>
@@ -120,29 +119,233 @@ import obj3 from "../assets/Capa_2.svg";
         </div>
       </div>
     </section>
-     <!-- Nosotros -->
-     <section
-     id="nosotros"
-     class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto px-6 md:px-6 py-6 min-h-screen"
-   >
-     <img src={construccion.src} alt="Ilustración" class="w-72 md:w-[420px]" />
-     <div class="max-w-xl text-center md:text-left">
-       <h3 class="text-3xl font-bold text-nav-bg mb-4">¿Quiénes Somos?</h3>
-       <p class=" flex text-sm leading-relaxed text-texto mb-6 font-semibold">
-         FRONTEND nace con el compromiso de fortalecer el ecosistema del
-         desarrollo de software en el Perú, integrando la cultura del Perú con
-         la innovación tecnológica. Queremos representar el crecimiento digital
-         del país sin perder nuestras raíces, inspirándonos en los elementos
-         que definen la identidad peruana en su esencia más auténtica.
-       </p>
-       <a
-         href="/"
-         class="border-2 border-nav-bg px-5 py-2 rounded-full text-nav-bg font-bold hover:bg-nav-bg hover:text-background transition"
-       >
-         FORMAR PARTE
-       </a>
-     </div>
-   </section>
 
+    <!-- meetups -->
+    <section id="meetups" class="text-texto px-6 py-16">
+      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="text-nav-bg text-2xl font-bold uppercase mb-2">meetups</h3>
+          <h2 class="w-[400px] text-3xl md:text-3xl font-bold mb-6 capitalize">
+            impulsando <span class="normal-case">el</span> desarrollo web <span
+              class="normal-case">en</span
+            > Perú
+          </h2>
+
+          <div class="space-y-6 md:flex md:gap-12">
+            <div class="flex flex-col items-start gap-4">
+              <div class="text-secondary">
+                <svg
+                  width="23"
+                  height="23"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_80_1380)">
+                    <path
+                      d="M0 12.175C0 11.7265 0 11.2765 0 10.828C0.0135012 10.7485 0.0300026 10.669 0.0420037 10.5895C0.11401 10.0946 0.154513 9.59209 0.261023 9.10461C0.861075 6.34473 2.2787 4.08133 4.52889 2.3774C7.32814 0.257992 10.4799 -0.445478 13.9167 0.271491C16.6679 0.844466 18.9046 2.2859 20.6148 4.51031C22.4615 6.9102 23.231 9.64458 22.9415 12.6535C22.7075 15.0908 21.7609 17.2433 20.1362 19.0807C18.3556 21.0951 16.1354 22.349 13.4847 22.8215C13.0511 22.898 12.6131 22.9415 12.1766 23H10.8294C10.7709 22.988 10.7139 22.967 10.6554 22.9625C8.85677 22.835 7.17362 22.3205 5.63749 21.3801C2.65673 19.5547 0.822071 16.9238 0.178516 13.4799C0.0990086 13.0494 0.0585051 12.61 0 12.175ZM9.76735 13.3629C9.66834 13.2699 9.61434 13.2204 9.56183 13.1679C8.81477 12.4225 8.0692 11.6755 7.32214 10.9315C7.23213 10.8415 7.13912 10.7545 7.04011 10.675C6.38005 10.1396 5.36297 10.2416 4.81842 10.8955C4.23787 11.593 4.29637 12.4975 4.97293 13.1769C6.13553 14.3424 7.30114 15.5063 8.46524 16.6688C9.25581 17.4592 10.2009 17.4592 10.993 16.6688C13.3227 14.3409 15.6509 12.013 17.9776 9.68508C18.0781 9.58459 18.1741 9.47959 18.2611 9.3671C18.9166 8.51213 18.4951 7.19669 17.466 6.8757C16.779 6.66271 16.2059 6.85771 15.7094 7.35568C13.7787 9.2891 11.8465 11.218 9.91586 13.1514C9.85886 13.2084 9.81985 13.2864 9.76735 13.3644V13.3629Z"
+                      fill="#B56EE1"></path>
+                    <path
+                      d="M9.76725 13.3629C9.82126 13.2849 9.85876 13.2084 9.91576 13.1499C11.8464 11.2165 13.7786 9.28758 15.7093 7.35416C16.2058 6.85618 16.7789 6.66119 17.4659 6.87418C18.495 7.19367 18.915 8.51061 18.261 9.36557C18.1755 9.47807 18.078 9.58306 17.9775 9.68356C15.6493 12.013 13.3211 14.3409 10.9929 16.6673C10.2008 17.4577 9.25721 17.4577 8.46514 16.6673C7.30104 15.5033 6.13544 14.3409 4.97284 13.1754C4.29628 12.4974 4.23927 11.5915 4.81832 10.894C5.36287 10.2415 6.37996 10.1395 7.04002 10.6735C7.13902 10.753 7.23203 10.84 7.32204 10.93C8.06911 11.6755 8.81467 12.4209 9.56173 13.1664C9.61424 13.2174 9.66824 13.2669 9.76725 13.3614V13.3629Z"
+                      fill="white"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_80_1380">
+                      <rect width="23" height="23" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-3xl font-bold text-nav-bg mb-1">
+                  Espacio de Integración
+                </h4>
+                <p class="text-texto">
+                  Desde 2012, estas reuniones conectan desarrolladores y
+                  fortalecen el ecosistema Web en Perú.
+                </p>
+              </div>
+            </div>
+            <div class="flex flex-col items-start gap-4">
+              <div class="text-frontend">
+                <svg
+                  width="23"
+                  height="23"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_80_1380)">
+                    <path
+                      d="M0 12.175C0 11.7265 0 11.2765 0 10.828C0.0135012 10.7485 0.0300026 10.669 0.0420037 10.5895C0.11401 10.0946 0.154513 9.59209 0.261023 9.10461C0.861075 6.34473 2.2787 4.08133 4.52889 2.3774C7.32814 0.257992 10.4799 -0.445478 13.9167 0.271491C16.6679 0.844466 18.9046 2.2859 20.6148 4.51031C22.4615 6.9102 23.231 9.64458 22.9415 12.6535C22.7075 15.0908 21.7609 17.2433 20.1362 19.0807C18.3556 21.0951 16.1354 22.349 13.4847 22.8215C13.0511 22.898 12.6131 22.9415 12.1766 23H10.8294C10.7709 22.988 10.7139 22.967 10.6554 22.9625C8.85677 22.835 7.17362 22.3205 5.63749 21.3801C2.65673 19.5547 0.822071 16.9238 0.178516 13.4799C0.0990086 13.0494 0.0585051 12.61 0 12.175ZM9.76735 13.3629C9.66834 13.2699 9.61434 13.2204 9.56183 13.1679C8.81477 12.4225 8.0692 11.6755 7.32214 10.9315C7.23213 10.8415 7.13912 10.7545 7.04011 10.675C6.38005 10.1396 5.36297 10.2416 4.81842 10.8955C4.23787 11.593 4.29637 12.4975 4.97293 13.1769C6.13553 14.3424 7.30114 15.5063 8.46524 16.6688C9.25581 17.4592 10.2009 17.4592 10.993 16.6688C13.3227 14.3409 15.6509 12.013 17.9776 9.68508C18.0781 9.58459 18.1741 9.47959 18.2611 9.3671C18.9166 8.51213 18.4951 7.19669 17.466 6.8757C16.779 6.66271 16.2059 6.85771 15.7094 7.35568C13.7787 9.2891 11.8465 11.218 9.91586 13.1514C9.85886 13.2084 9.81985 13.2864 9.76735 13.3644V13.3629Z"
+                      fill="#FFDD00"></path>
+                    <path
+                      d="M9.76725 13.3629C9.82126 13.2849 9.85876 13.2084 9.91576 13.1499C11.8464 11.2165 13.7786 9.28758 15.7093 7.35416C16.2058 6.85618 16.7789 6.66119 17.4659 6.87418C18.495 7.19367 18.915 8.51061 18.261 9.36557C18.1755 9.47807 18.078 9.58306 17.9775 9.68356C15.6493 12.013 13.3211 14.3409 10.9929 16.6673C10.2008 17.4577 9.25721 17.4577 8.46514 16.6673C7.30104 15.5033 6.13544 14.3409 4.97284 13.1754C4.29628 12.4974 4.23927 11.5915 4.81832 10.894C5.36287 10.2415 6.37996 10.1395 7.04002 10.6735C7.13902 10.753 7.23203 10.84 7.32204 10.93C8.06911 11.6755 8.81467 12.4209 9.56173 13.1664C9.61424 13.2174 9.66824 13.2669 9.76725 13.3614V13.3629Z"
+                      fill="white"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_80_1380">
+                      <rect width="23" height="23" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div>
+                <h4 class="text-3xl font-bold text-nav-bg mb-1">
+                  Crecimiento y Alcance
+                </h4>
+                <p class="text-texto">
+                  Encuentros que proporcionan las bases para desarrollar
+                  habilidades prácticas y mejorar la colaboración.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src={foto.src} />
+        </div>
+      </div>
+    </section>
+    <!-- auspicio -->
+
+    <section
+      class="flex flex-col relative justify-center items-center gap-4 w-full overflow-hidden py-16"
+    >
+      <!-- Fondo -->
+      <img
+        src={fond2.src}
+        class="absolute inset-0 w-full h-full object-cover z-0"
+      />
+
+      <h2 class="text-3xl font-bold mb-12 z-10 text-center">
+        Programa de auspicio
+      </h2>
+
+      <div
+        class="relative z-10 flex flex-col md:flex-row gap-10 md:gap-8 justify-center p-6"
+      >
+        <!-- 3 Meses -->
+        <div
+          class="w-[278px] h-[290px] bg-texto border-[4px] border-secondary rounded-2xl p-6 flex flex-col items-center text-center"
+        >
+          <div
+            class="bg-secondary text-texto font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-10"
+          >
+            3 MESES
+          </div>
+          <div class="mt-6 mb-4">
+            <div
+              class="bg-frontend text-secondary text-[32px] font-bold flex items-center justify-center w-[106px] h-[66px] rounded-[90px]"
+            >
+              $150
+            </div>
+          </div>
+          <ul
+            class="w-[230px] h-[80px] text-xs text-text-secundary space-y-3 mb-6 flex flex-col"
+          >
+            <li>
+              Publicación del logo de su empresa en medios web y anuncios del
+              evento en nuestros canales.
+            </li>
+            <li>Tamaño de Logo: S</li>
+          </ul>
+          <div class="mt-auto">
+            <button
+              class="bg-secondary text-white text-xs font-bold w-[99px] h-[39px] rounded-[28px] uppercase"
+              >patrocionar</button
+            >
+          </div>
+        </div>
+
+        <!-- 6 Meses -->
+        <div
+          class="w-[278px] h-[491px] bg-white border-[4px] border-nav-bg rounded-2xl p-6 flex flex-col items-center text-center"
+        >
+          <div
+            class="bg-nav-bg text-secondary font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-10"
+          >
+            6 MESES
+          </div>
+          <div class="mt-6 mb-4">
+            <div
+              class="bg-nav-bg text-secondary text-[32px] font-bold flex items-center justify-center w-[106px] h-[66px] rounded-[90px]"
+            >
+              $300
+            </div>
+          </div>
+          <ul
+            class="w-[230px] h-[288px] text-xs text-text-secundary space-y-2 mb-4 flex flex-col"
+          >
+            <li>
+              Publicación del logo de su empresa en medios web y anuncios del
+              evento en nuestros canales.
+            </li>
+            <li>Tamaño de Logo: M</li>
+            <li>
+              Impresión del logo en polos del grupo (parte trasera, por
+              edición).
+            </li>
+            <li>Presentación de la empresa durante el meetup: 2 min.</li>
+            <li>
+              Difusión de publicidad (merchandising, afiches, volantes, etc.).
+            </li>
+            <li>Sorteos de productos/servicios de auspiciadores.</li>
+            <li>Menciones de agradecimiento en apertura y cierre.</li>
+          </ul>
+          <div class="mt-auto">
+            <button
+              class="w-[99px] h-[39px] text-xs bg-nav-bg text-secondary font-bold rounded-[28px] uppercase"
+              >patrocinar</button
+            >
+          </div>
+        </div>
+
+        <!-- 1 año -->
+        <div
+          class="w-[278px] h-[551px] bg-texto border-[4px] border-frontend rounded-2xl p-6 flex flex-col items-center text-center"
+        >
+          <div
+            class="bg-frontend text-secondary font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-10"
+          >
+            1 AÑO
+          </div>
+          <div class="mt-6 mb-4">
+            <div
+              class="bg-frontend text-secondary text-[32px] font-bold flex items-center justify-center w-[106px] h-[66px] rounded-[90px]"
+            >
+              $500
+            </div>
+          </div>
+          <ul
+            class="w-[230px] h-[382px] text-xs text-text-secundary space-y-2 mb-4 flex flex-col"
+          >
+            <li>
+              Publicación del logo de su empresa en medios web y anuncios del
+              evento en nuestros canales.
+            </li>
+            <li>Tamaño de Logo: L</li>
+            <li>
+              Impresión del logo en polos del grupo (parte trasera, por
+              edición).
+            </li>
+            <li>Cantidad de banners en la instalación del evento: 1.</li>
+            <li>Sesión de 25 min en el evento de negocios o desarrollo.</li>
+            <li>Presentación de la empresa durante el meetup: 5 min.</li>
+            <li>
+              Difusión de publicidad (merchandising, afiches, volantes, etc.).
+            </li>
+            <li>Sorteos de productos/servicios de auspiciadores.</li>
+            <li>Menciones de agradecimiento en apertura y cierre.</li>
+          </ul>
+          <div class="mt-auto">
+            <button
+              class="w-[99px] h-[39px] text-xs bg-frontend text-secondary font-bold rounded-[28px] uppercase"
+              >patrocinar</button
+            >
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </Layout>
