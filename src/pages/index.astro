@@ -10,6 +10,9 @@ import obj2 from '../assets/Capa_1.svg';
 import obj3 from '../assets/Capa_2.svg';
 import fond2 from '../assets/fondo2.png';
 import foto from '../assets/meetups_foto.png';
+import persona from '../assets/persona.svg';
+import vector from '../assets/vector.svg';
+import stats from '../assets/stats.png';
 ---
 
 <Layout>
@@ -230,9 +233,9 @@ import foto from '../assets/meetups_foto.png';
           class="w-[278px] h-[290px] bg-texto border-[4px] border-secondary rounded-2xl p-6 flex flex-col items-center text-center"
         >
           <div
-            class="bg-secondary text-texto font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-10"
+            class="bg-secondary text-texto font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-10 uppercase"
           >
-            3 MESES
+            3 meses
           </div>
           <div class="mt-6 mb-4">
             <div
@@ -263,9 +266,9 @@ import foto from '../assets/meetups_foto.png';
           class="w-[278px] h-[491px] bg-white border-[4px] border-nav-bg rounded-2xl p-6 flex flex-col items-center text-center"
         >
           <div
-            class="bg-nav-bg text-secondary font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-10"
+            class="bg-nav-bg text-secondary font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-10 uppercase"
           >
-            6 MESES
+            6 meses
           </div>
           <div class="mt-6 mb-4">
             <div
@@ -345,6 +348,76 @@ import foto from '../assets/meetups_foto.png';
             >
           </div>
         </div>
+      </div>
+    </section>
+    <!-- suscripcion -->
+    <section class="relative px-20 py-20 z-0">
+      <div
+        class="relative bg-frontend px-20 py-10 max-w-[1500px] h-[350px] mx-auto flex flex-col md:flex-row items-center justify-between gap-40 overflow-visible"
+      >
+        <div class="md:w-1/2">
+          <span class="text-xl font-bold text-texto bg-nav-bg px-4 py-2">
+            ¡Suscríbete!
+          </span>
+          <h3
+            class="text-[40px] leading-tight font-extrabold mt-4 mb-6 text-background"
+          >
+            Únete y forma parte <br /> de esta comunidad
+          </h3>
+
+          <form
+            class="flex items-center bg-texto rounded-full pl-4 pr-2 py-2 w-fit"
+          >
+            <input
+              type="email"
+              placeholder="Ingresar correo"
+              class="rounded-full px-2 py-2 w-[220px] text-black placeholder-gray-500 focus:outline-none text-sm"
+            />
+            <button
+              type="submit"
+              class="ml-2 w-[99px] h-[39px] bg-secondary hover:bg-secondary text-texto text-xs font-bold rounded-full uppercase"
+            >
+              suscribirse
+            </button>
+          </form>
+        </div>
+        <div
+          class="md:w-1/2 flex justify-center overflow-visible relative z-30"
+        >
+          <img
+            src={persona.src}
+            alt="persona"
+            class="absolute top-1/2 -translate-y-1/2 w-[500px] h-[700px] object-contain z-30"
+          />
+        </div>
+
+        <img
+          src={vector.src}
+          alt="vector"
+          class="absolute bottom-0 left-0 w-full z-10"
+        />
+      </div>
+    </section>
+    <!-- final -->
+    <section
+      class="flex flex-col relative justify-center items-center gap-10 w-full overflow-hidden py-16"
+    >
+      <img
+        src={stats.src}
+        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+      />
+      <div class="relative z-10 flex flex-col items-center text-center p-6">
+        <h3 class="text-[40px] font-bold mb-10">
+          <span class="text-nav-bg">11,700+</span>
+          <span class="text-nav-text">en Facebook</span>
+          <span class="text-nav-bg">/1500+</span>
+          <span class="text-nav-text">en Meetup.com</span>
+          <span class="text-nav-bg">/</span>
+          <br />
+          <span class="text-nav-text">promedio</span>
+          <span class="text-nav-bg">40</span>
+          <span class="text-nav-text">asistentes por meetup.</span>
+        </h3>
       </div>
     </section>
   </main>
