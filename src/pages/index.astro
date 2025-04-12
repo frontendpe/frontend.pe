@@ -13,25 +13,24 @@ import foto from '../assets/meetups_foto.png';
 import persona from '../assets/persona.svg';
 import vector from '../assets/vector.svg';
 import stats from '../assets/stats.png';
+import people from '../data.json';
+import Data from '../components/data.jsx';
 ---
 
 <Layout>
-  <main
-    class="bg-background text-texto font-sans min-h-screen flex flex-col gap-8"
-  >
+  <main class="bg-background text-texto font-sans flex flex-col gap-8">
     <Nav />
-
     <!-- Inicio -->
     <section
       id="inicio"
-      class="flex flex-col items-center text-center pt-40 gap-8 px-6 py-8"
+      class="flex flex-col items-center text-center pt-40 gap-8 py-8 px-6"
     >
       <h2 class="text-nav-bg md:text-base tracking-widest uppercase">
         el futuro se programa línea por línea.
       </h2>
       <a
         href="#nosotros"
-        class="bg-nav-bg text-nav-text font-bold px-6 py-3 rounded-full transition duration-300 hover:bg-nav-text hover:text-nav-bg uppercase"
+        class="bg-nav-bg text-nav-text font-bold py-3 px-3 rounded-full transition duration-300 hover:bg-nav-text hover:text-nav-bg uppercase"
       >
         hazlo posible
       </a>
@@ -46,7 +45,7 @@ import stats from '../assets/stats.png';
     <!-- Nosotros -->
     <section
       id="nosotros"
-      class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto px-6 py-16"
+      class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto py-16"
     >
       <img src={construccion.src} class="w-72 md:w-[420px]" />
       <div class="max-w-lg text-center md:text-left">
@@ -124,8 +123,8 @@ import stats from '../assets/stats.png';
     </section>
 
     <!-- meetups -->
-    <section id="meetups" class="text-texto px-6 py-16">
-      <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <section id="meetups" class="text-texto py-16">
+      <div class="max-w-6xl mx-auto flex flex-cols-2 gap-12 items-center">
         <div>
           <h3 class="text-nav-bg text-2xl font-bold uppercase mb-2">meetups</h3>
           <h2 class="w-[400px] text-3xl md:text-3xl font-bold mb-6 capitalize">
@@ -160,7 +159,7 @@ import stats from '../assets/stats.png';
                 </svg>
               </div>
               <div>
-                <h4 class="text-3xl font-bold text-nav-bg mb-1">
+                <h4 class="text-4xl font-bold text-nav-bg mb-1">
                   Espacio de Integración
                 </h4>
                 <p class="text-texto">
@@ -194,7 +193,7 @@ import stats from '../assets/stats.png';
                 </svg>
               </div>
               <div>
-                <h4 class="text-3xl font-bold text-nav-bg mb-1">
+                <h4 class="text-4xl font-bold text-nav-bg mb-1">
                   Crecimiento y Alcance
                 </h4>
                 <p class="text-texto">
@@ -233,13 +232,13 @@ import stats from '../assets/stats.png';
           class="w-[278px] h-[290px] bg-texto border-[4px] border-secondary rounded-2xl p-6 flex flex-col items-center text-center"
         >
           <div
-            class="bg-secondary text-texto font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-10 uppercase"
+            class="flex items-center justify-center bg-secondary text-texto font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-[42px] uppercase"
           >
             3 meses
           </div>
           <div class="mt-6 mb-4">
             <div
-              class="bg-frontend text-secondary text-[32px] font-bold flex items-center justify-center w-[106px] h-[66px] rounded-[90px]"
+              class="bg-secondary text-texto text-[32px] font-bold flex items-center justify-center w-[106px] h-[66px] rounded-[90px]"
             >
               $150
             </div>
@@ -255,18 +254,18 @@ import stats from '../assets/stats.png';
           </ul>
           <div class="mt-auto">
             <button
-              class="bg-secondary text-white text-xs font-bold w-[99px] h-[39px] rounded-[28px] uppercase"
-              >patrocionar</button
-            >
+              class="bg-secondary text-texto text-xs font-bold w-[99px] h-[39px] rounded-[28px] uppercase hover:bg-nav-bg hover:text-secondary transition"
+              >patrocionar
+            </button>
           </div>
         </div>
 
         <!-- 6 Meses -->
         <div
-          class="w-[278px] h-[491px] bg-white border-[4px] border-nav-bg rounded-2xl p-6 flex flex-col items-center text-center"
+          class="w-[278px] h-[491px] bg-texto border-[4px] border-nav-bg rounded-2xl p-6 flex flex-col items-center text-center"
         >
           <div
-            class="bg-nav-bg text-secondary font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-10 uppercase"
+            class="bg-nav-bg text-secondary font-bold w-[168px] h-[34px] rounded-[90px] -mt-[42px] uppercase text-center flex items-center justify-center"
           >
             6 meses
           </div>
@@ -298,7 +297,7 @@ import stats from '../assets/stats.png';
           </ul>
           <div class="mt-auto">
             <button
-              class="w-[99px] h-[39px] text-xs bg-nav-bg text-secondary font-bold rounded-[28px] uppercase"
+              class="w-[99px] h-[39px] text-xs bg-nav-bg text-secondary font-bold rounded-[28px] uppercase hover:bg-frontend hover:text-secondary transition"
               >patrocinar</button
             >
           </div>
@@ -309,9 +308,9 @@ import stats from '../assets/stats.png';
           class="w-[278px] h-[551px] bg-texto border-[4px] border-frontend rounded-2xl p-6 flex flex-col items-center text-center"
         >
           <div
-            class="bg-frontend text-secondary font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-10"
+            class="flex items-center justify-center bg-frontend text-secondary font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-[42px] uppercase"
           >
-            1 AÑO
+            1 año
           </div>
           <div class="mt-6 mb-4">
             <div
@@ -343,30 +342,33 @@ import stats from '../assets/stats.png';
           </ul>
           <div class="mt-auto">
             <button
-              class="w-[99px] h-[39px] text-xs bg-frontend text-secondary font-bold rounded-[28px] uppercase"
+              class="w-[99px] h-[39px] text-xs bg-frontend text-secondary font-bold rounded-[28px] uppercase hover:bg-secondary hover:text-texto transition"
               >patrocinar</button
             >
           </div>
         </div>
       </div>
     </section>
-    <!-- suscripcion -->
-    <section class="relative px-20 py-20 z-0">
+    <!-- contacto -->
+    <section
+      id="contacto"
+      class="relative px-20 py-20 sm:px-8 md:px-20 z-0 w-full overflow-hidden"
+    >
       <div
-        class="relative bg-frontend px-20 py-10 max-w-[1500px] h-[350px] mx-auto flex flex-col md:flex-row items-center justify-between gap-40 overflow-visible"
+        class="relative bg-frontend px-6 sm:px-12 md:px-20 py-10 max-w-[1500px] h-[350px] mx-auto flex flex-col md:flex-row items-center justify-between gap-40 overflow-visible"
       >
-        <div class="md:w-1/2">
+        <div class="md:w-1/2 text-center md:text-left">
           <span class="text-xl font-bold text-texto bg-nav-bg px-4 py-2">
             ¡Suscríbete!
           </span>
           <h3
-            class="text-[40px] leading-tight font-extrabold mt-4 mb-6 text-background"
+            class="text-xl sm:text-4xl font-extrabold mt-4 mb-6 text-background leading-snug"
           >
             Únete y forma parte <br /> de esta comunidad
           </h3>
 
           <form
-            class="flex items-center bg-texto rounded-full pl-4 pr-2 py-2 w-fit"
+            class="flex flex-col sm:flex-row items-center sm:items-start gap-2 bg-texto rounded-full px-4 py-2 w-fit mx-auto md:mx-0"
           >
             <input
               type="email"
@@ -375,7 +377,7 @@ import stats from '../assets/stats.png';
             />
             <button
               type="submit"
-              class="ml-2 w-[99px] h-[39px] bg-secondary hover:bg-secondary text-texto text-xs font-bold rounded-full uppercase"
+              class="ml-2 w-[99px] h-[39px] bg-secondary text-texto text-xs font-bold rounded-full uppercase hover:bg-nav-bg hover:text-secondary transition"
             >
               suscribirse
             </button>
@@ -418,6 +420,16 @@ import stats from '../assets/stats.png';
           <span class="text-nav-bg">40</span>
           <span class="text-nav-text">asistentes por meetup.</span>
         </h3>
+      </div>
+    </section>
+    <!-- tarjetas de presentacion -->
+
+    <section
+      class="flex flex-col items-center justify-center w-full px-6 sm:px-6 md:px-20 py-8 gap-8"
+    >
+      <h2 class="text-3xl font-bold text-center">Miembros de la Comunidad</h2>
+      <div class="w-full justify-center">
+        <Data client:load people={people} />
       </div>
     </section>
   </main>
