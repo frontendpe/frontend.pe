@@ -1,33 +1,25 @@
 @import "tailwindcss";
 
 @layer base {
+  :root {
+    scroll-behavior: smooth;
 
-    :root {
-        scroll-behavior: smooth;
-
-        --nav-text: #633C77;
-        --background: #211421;
-        --nav-bg: #38FFE8;
-        --texto: #FFFFFF;
-        --frontend: #F9F051;
-        --secondary:#B56EE1;
-        --text-secundary:#8F8F8F;
-
-    }
-    *{
-        outline: 1px solid limegreen;
-    }
+    --nav-text: #633c77;
+    --background: #211421;
+    --nav-bg: #38ffe8;
+    --texto: #ffffff;
+    --frontend: #f9f051;
+    --secondary: #b56ee1;
+    --text-secundary: #8f8f8f;
+  }
 }
 
-
 @theme {
-    --color-background: var(--background);
-    --color-frontend: var(--frontend);
-    --color-nav-bg: var(--nav-bg);
-    --color-nav-text: var(--nav-text);
-    --color-texto: var(--texto);
-    --color-secondary: var(--secondary);
-    --color-text-secundary: var(--text-secundary);
-
-
+  --color-background: var(--background);
+  --color-frontend: var(--frontend);
+  --color-nav-bg: var(--nav-bg);
+  --color-nav-text: var(--nav-text);
+  --color-texto: var(--texto);
+  --color-secondary: var(--secondary);
+  --color-text-secundary: var(--text-secundary);
 }
