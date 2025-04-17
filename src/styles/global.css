@@ -3,9 +3,19 @@
 @import "slick-carousel/slick/slick-theme.css";
 
 
+@font-face {
+    font-family: 'impact';
+    src: url('/fonts/impact-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
 @layer base {
 
     :root {
+        font-family: 'Roboto', sans-serif;
+
 
         --nav-text: #633C77;
         --background: #211421;
@@ -14,8 +24,6 @@
         --frontend: #F9F051;
         --secondary:#B56EE1;
         --text-secundary:#8F8F8F;
-        
-        font-family: "Roboto", sans-serif;
         font-optical-sizing: auto;
         scroll-behavior: smooth;
 
@@ -34,6 +42,5 @@
     --color-texto: var(--texto);
     --color-secondary: var(--secondary);
     --color-text-secundary: var(--text-secundary);
-
-
+    --font-impact: 'impact', sans-serif;
 }

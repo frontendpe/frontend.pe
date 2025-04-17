@@ -1,6 +1,5 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import banner from '../assets/banner.png';
 import construccion from '../assets/construccion.png';
@@ -14,18 +13,18 @@ import vector from '../assets/vector.svg';
 import stats from '../assets/stats.png';
 import people from '../data.json';
 import Data from '../components/data.jsx';
-import Carrusel from '../components/carrusel.jsx';
+import Slider from '../components/slider.jsx';
 ---
 
 <Layout>
-  <main class="bg-background text-texto font-sans flex flex-col gap-8">
+  <main class="bg-background text-texto flex flex-col gap-8">
     <Nav />
     <!-- Inicio -->
     <section
       id="inicio"
       class="flex flex-col items-center text-center pt-49 gap-10 py-8 px-6"
     >
-      <h2 class="text-nav-bg md:text-base tracking-widest uppercase">
+      <h2 class="text-nav-bg md:text-base tracking-[.3em] uppercase">
         el futuro se programa línea por línea.
       </h2>
       <a
@@ -45,7 +44,7 @@ import Carrusel from '../components/carrusel.jsx';
     <!-- Nosotros -->
     <section
       id="nosotros"
-      class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto py-16 p-6"
+      class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto py-20 p-6"
     >
       <img
         src={construccion.src}
@@ -129,17 +128,18 @@ import Carrusel from '../components/carrusel.jsx';
     </section>
 
     <!-- meetups -->
-    <section id="meetups" class="text-texto py-16">
+    <section id="meetups" class="text-texto py-20">
       <div
-        class="flex flex-col md:flex-row max-w-6xl mx-auto gap-12 items-center p-6"
+        class="flex flex-col md:flex-row px-6 md:px-12 gap-20 mx-auto items-center"
       >
-        <div>
-          <h3 class="text-nav-bg text-2xl font-bold uppercase mb-2">meetups</h3>
+        <div class="w-full md:w-1/2">
+          <h3 class="text-nav-bg text-2xl font-bold uppercase mb-2">Meetups</h3>
           <h2 class="text-3xl md:text-3xl font-bold mb-6 max-w-sm">
             Impulsando el Desarrollo Web en Perú
           </h2>
 
-          <div class="grid md:grid-cols-2 space-y-6 md:gap-12">
+          <div class="grid md:grid-cols-2 gap-20">
+            <!-- Bloque 1 -->
             <div class="flex flex-col items-start gap-4">
               <div class="text-secondary">
                 <svg
@@ -168,12 +168,14 @@ import Carrusel from '../components/carrusel.jsx';
                 <h4 class="text-2xl font-bold text-nav-bg mb-1">
                   Espacio de Integración
                 </h4>
-                <p class="text-texto">
+                <p>
                   Desde 2012, estas reuniones conectan desarrolladores y
                   fortalecen el ecosistema Web en Perú.
                 </p>
               </div>
             </div>
+
+            <!-- Bloque 2 -->
             <div class="flex flex-col items-start gap-4">
               <div class="text-frontend">
                 <svg
@@ -202,20 +204,23 @@ import Carrusel from '../components/carrusel.jsx';
                 <h4 class="text-2xl font-bold text-nav-bg mb-1">
                   Crecimiento y Alcance
                 </h4>
-                <p class="text-texto">
-                  Encuentros que proporcionan las bases para desarrollar
-                  habilidades prácticas y mejorar la colaboración.
+                <p>
+                  Con más de 20 ediciones y 2000 asistentes, el evento sigue
+                  fortaleciendo la comunidad tech.
                 </p>
               </div>
             </div>
           </div>
         </div>
+
+        <!-- Slider -->
         <div class="w-full md:w-1/2">
-          <Carrusel client:only="react" />        
+          <Slider client:only="react" />
+        </div>
       </div>
     </section>
-    <!-- auspicio -->
 
+    <!-- auspicio -->
     <section
       class="flex flex-col relative justify-center items-center gap-4 w-full overflow-hidden py-16"
     >
@@ -354,10 +359,11 @@ import Carrusel from '../components/carrusel.jsx';
         </div>
       </div>
     </section>
-    <!-- contacto -->
+
+    <!-- Contacto -->
     <section
       id="contacto"
-      class="relative px-20 py-20 sm:px-8 md:px-20 z-0 w-full overflow-hidden"
+      class="scroll-m-y relative px-20 py-20 sm:px-8 md:px-20 z-0 w-ful"
     >
       <div
         class="relative bg-frontend px-6 sm:px-12 md:px-20 py-10 max-w-[1500px] h-[350px] mx-auto flex flex-col md:flex-row items-center justify-between gap-40 overflow-visible"
@@ -405,7 +411,8 @@ import Carrusel from '../components/carrusel.jsx';
         />
       </div>
     </section>
-    <!-- final -->
+
+    <!-- Final -->
     <section
       class="flex flex-col relative justify-center items-center gap-10 w-full overflow-hidden py-16"
     >
@@ -427,8 +434,8 @@ import Carrusel from '../components/carrusel.jsx';
         </h3>
       </div>
     </section>
-    <!-- tarjetas de presentacion -->
 
+    <!-- Tarjetas de presentacion -->
     <section
       class="flex flex-col items-center justify-center w-full p-6 sm:px-6 md:px-20 py-8 gap-8"
     >

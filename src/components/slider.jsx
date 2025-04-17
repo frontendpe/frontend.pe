@@ -2,17 +2,16 @@ import Slider from "react-slick";
 import photo from "../assets/meetups_foto.png";
 import construccion from '../assets/construccion.png';
 
-function Fade() {
+function LazyLoad() {
   const settings = {
     dots: true,
-    fade: true,
+    lazyLoad: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    waitForAnimate: false
+    initialSlide: 2
   };
-
   return (
     <div className="slider-container">
       <Slider {...settings}>
@@ -25,4 +24,4 @@ function Fade() {
   );
 }
 
-export default Fade;
+export default LazyLoad;
