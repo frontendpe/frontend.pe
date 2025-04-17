@@ -12,10 +12,6 @@
   
 
 @layer base {
-  :root {
-    scroll-behavior: smooth;
-
-<<<<<<< HEAD
     :root {
         font-family: 'Roboto', sans-serif;
 
@@ -34,20 +30,10 @@
 
 /* outline: 1px solid limegreen; */
 
-=======
-    --nav-text: #633c77;
-    --background: #211421;
-    --nav-bg: #38ffe8;
-    --texto: #ffffff;
-    --frontend: #f9f051;
-    --secondary: #b56ee1;
-    --text-secundary: #8f8f8f;
-  }
->>>>>>> feea2a461359e18111c1d6f5d1dff6e56b5a7649
+
 }
 
 @theme {
-<<<<<<< HEAD
     --color-background: var(--background);
     --color-frontend: var(--frontend);
     --color-nav-bg: var(--nav-bg);
@@ -57,13 +43,4 @@
     --color-text-secundary: var(--text-secundary);
     --font-impact: 'impact', sans-serif;
 }
-=======
-  --color-background: var(--background);
-  --color-frontend: var(--frontend);
-  --color-nav-bg: var(--nav-bg);
-  --color-nav-text: var(--nav-text);
-  --color-texto: var(--texto);
-  --color-secondary: var(--secondary);
-  --color-text-secundary: var(--text-secundary);
-}
->>>>>>> feea2a461359e18111c1d6f5d1dff6e56b5a7649
+
