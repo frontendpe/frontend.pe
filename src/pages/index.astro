@@ -4,17 +4,17 @@ import '../styles/global.css';
 import Nav from '../components/Nav.astro';
 import banner from '../assets/banner.png';
 import construccion from '../assets/construccion.png';
-import background from '../assets/background.png';
+import pattern from '../assets/pattern-1.png';
 import obj1 from '../assets/Group 2.svg';
 import obj2 from '../assets/Capa_1.svg';
 import obj3 from '../assets/Capa_2.svg';
 import fond2 from '../assets/fondo2.png';
-import foto from '../assets/meetups_foto.png';
 import persona from '../assets/persona.svg';
 import vector from '../assets/vector.svg';
 import stats from '../assets/stats.png';
 import people from '../data.json';
 import Data from '../components/data.jsx';
+import Carrusel from '../components/carrusel.jsx';
 ---
 
 <Layout>
@@ -23,14 +23,14 @@ import Data from '../components/data.jsx';
     <!-- Inicio -->
     <section
       id="inicio"
-      class="flex flex-col items-center text-center pt-40 gap-12 py-8 px-6"
+      class="flex flex-col items-center text-center pt-49 gap-10 py-8 px-6"
     >
       <h2 class="text-nav-bg md:text-base tracking-widest uppercase">
         el futuro se programa línea por línea.
       </h2>
       <a
-        href="#nosotros"
-        class="bg-nav-bg text-nav-text font-bold py-3 px-3 rounded-full transition duration-300 hover:bg-nav-text hover:text-nav-bg uppercase"
+        href=""
+        class="bg-nav-bg text-nav-text font-bold py-3 px-6 rounded-full transition duration-300 hover:bg-nav-text hover:text-nav-bg uppercase"
       >
         hazlo posible
       </a>
@@ -47,16 +47,23 @@ import Data from '../components/data.jsx';
       id="nosotros"
       class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto py-16 p-6"
     >
-      <img src={construccion.src} class="w-72 md:w-[420px]" />
+      <img
+        src={construccion.src}
+        class="w-[280px] h-auto md:w-[472px] md:h-[403px] object-cover"
+      />
       <div class="max-w-lg text-center md:text-left">
         <h3 class="text-3xl font-bold text-nav-bg mb-4">¿Quiénes somos?</h3>
-        <p class="leading-relaxed text-texto mb-6 font-semibold">
-          Frontend nace con el compromiso de fortalecer el ecosistema del
-          desarrollo de software en el Perú, integrando la cultura del Perú con
-          la innovación tecnológica. Queremos representar el crecimiento digital
-          del país sin perder nuestras raíces, inspirándonos en los elementos
-          que definen la identidad peruana en su esencia más auténtica.
-        </p>
+        <div class="leading-relaxed text-texto mb-6 font-semibold">
+          <p>FRONTEND nace con el compromiso de fortalecer el</p>
+          <p>ecosistema del desarrollo de software en el Perú, integrando la</p>
+          <p>cultura del Perú con la innovación tecnológica. Queremos</p>
+          <p>representar el crecimiento digital del país sin perder nuestras</p>
+          <p>
+            raíces, inspirándonos en los elementos que definen la identidad
+            peruana en su esencia más auténtica.
+          </p>
+        </div>
+
         <a
           href="/"
           class="border-2 border-nav-bg px-5 py-2 rounded-full text-nav-bg font-bold hover:bg-nav-bg hover:text-background transition uppercase"
@@ -68,38 +75,37 @@ import Data from '../components/data.jsx';
 
     <!-- Objetivos -->
     <section
-      class="flex flex-col relative justify-center items-center gap-10 w-full overflow-hidden py-16"
+      class="relative flex flex-col items-center justify-center w-full overflow-hidden py-20"
     >
       <img
-        src={background.src}
-        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+        src={pattern.src}
+        class="absolute inset-0 w-full h-full object-cover z-0"
+        alt="Fondo decorativo"
       />
-      <div class="relative z-10 flex flex-col items-center text-center p-6">
-        <h3 class="text-3xl font-bold text-texto mb-10">Nuestros objetivos</h3>
-        <div
-          class="flex flex-col md:flex-row gap-10 md:gap-8 justify-center items-stretch max-w-5xl"
-        >
+      <div class="relative z-10 max-w-6xl w-full px-4 text-center">
+        <h3 class="text-3xl font-bold text-texto mb-16">Nuestros objetivos</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-stretch">
           <!-- Objetivo 1 -->
-          <div class="flex flex-col items-center text-center">
+          <div class="flex flex-col items-center text-center h-full px-4">
             <div
-              class="bg-nav-bg p-4 rounded-xl mb-4 flex items-center justify-center"
+              class="bg-nav-bg p-3 rounded-sm flex items-center justify-center mb-6"
             >
-              <img src={obj1.src} class="w-16 h-16" />
+              <img src={obj1.src} class="w-[42px] h-[42px]" alt="Objetivo 1" />
             </div>
-            <p class="text-texto font-semibold leading-relaxed">
+            <p class="text-texto font-semibold h-full">
               Difundir las tecnologías Web Front-end en el ámbito tecnológico y
               emprendimientos a nivel nacional.
             </p>
           </div>
 
           <!-- Objetivo 2 -->
-          <div class="flex flex-col items-center text-center">
+          <div class="flex flex-col items-center text-center h-full px-4">
             <div
-              class="bg-nav-bg p-4 rounded-xl mb-4 flex items-center justify-center"
+              class="bg-nav-bg p-3 rounded-sm flex items-center justify-center mb-6"
             >
-              <img src={obj2.src} class="w-16 h-16" />
+              <img src={obj2.src} class="w-[42px] h-[42px]" alt="Objetivo 2" />
             </div>
-            <p class="text-texto font-semibold leading-relaxed">
+            <p class="text-texto font-semibold h-full">
               Permitir a los profesionales y emprendedores del país el
               desarrollo de sus actividades usando herramientas y procedimientos
               actuales.
@@ -107,13 +113,13 @@ import Data from '../components/data.jsx';
           </div>
 
           <!-- Objetivo 3 -->
-          <div class="flex flex-col items-center text-center">
+          <div class="flex flex-col items-center text-center h-full px-4">
             <div
-              class="bg-nav-bg p-4 rounded-xl mb-4 flex items-center justify-center"
+              class="bg-nav-bg p-3 rounded-sm flex items-center justify-center mb-6"
             >
-              <img src={obj3.src} class="w-16 h-16" />
+              <img src={obj3.src} class="w-[42px] h-[42px]" alt="Objetivo 3" />
             </div>
-            <p class="text-texto font-semibold leading-relaxed">
+            <p class="text-texto font-semibold h-full">
               Contribuir con nuestra sociedad en compartir conocimiento,
               emprendimiento, tecnología y networking.
             </p>
@@ -129,7 +135,7 @@ import Data from '../components/data.jsx';
       >
         <div>
           <h3 class="text-nav-bg text-2xl font-bold uppercase mb-2">meetups</h3>
-          <h2 class="w-[400px] text-3xl md:text-3xl font-bold mb-6">
+          <h2 class="text-3xl md:text-3xl font-bold mb-6 max-w-sm">
             Impulsando el Desarrollo Web en Perú
           </h2>
 
@@ -159,7 +165,7 @@ import Data from '../components/data.jsx';
                 </svg>
               </div>
               <div>
-                <h4 class="text-4xl font-bold text-nav-bg mb-1">
+                <h4 class="text-2xl font-bold text-nav-bg mb-1">
                   Espacio de Integración
                 </h4>
                 <p class="text-texto">
@@ -193,7 +199,7 @@ import Data from '../components/data.jsx';
                 </svg>
               </div>
               <div>
-                <h4 class="text-4xl font-bold text-nav-bg mb-1">
+                <h4 class="text-2xl font-bold text-nav-bg mb-1">
                   Crecimiento y Alcance
                 </h4>
                 <p class="text-texto">
@@ -204,9 +210,8 @@ import Data from '../components/data.jsx';
             </div>
           </div>
         </div>
-        <div>
-          <img src={foto.src} class="w-72 md:w-[820px]" />
-        </div>
+        <div class="w-full md:w-1/2">
+          <Carrusel client:only="react" />        
       </div>
     </section>
     <!-- auspicio -->
@@ -254,7 +259,7 @@ import Data from '../components/data.jsx';
           </ul>
           <div class="mt-auto">
             <button
-              class="bg-secondary text-texto text-xs font-bold w-[99px] h-[39px] rounded-[28px] uppercase hover:bg-nav-bg hover:text-secondary transition"
+              class="bg-secondary text-texto text-xs font-bold px-4 py-2 rounded-full uppercase hover:bg-nav-bg hover:text-secondary transition"
               >patrocionar
             </button>
           </div>
@@ -297,7 +302,7 @@ import Data from '../components/data.jsx';
           </ul>
           <div class="mt-auto">
             <button
-              class="w-[99px] h-[39px] text-xs bg-nav-bg text-secondary font-bold rounded-[28px] uppercase hover:bg-frontend hover:text-secondary transition"
+              class="text-xs bg-nav-bg text-secondary font-bold px-4 py-2 rounded-full uppercase hover:bg-frontend hover:text-secondary transition"
               >patrocinar</button
             >
           </div>
@@ -342,7 +347,7 @@ import Data from '../components/data.jsx';
           </ul>
           <div class="mt-auto">
             <button
-              class="w-[99px] h-[39px] text-xs bg-frontend text-secondary font-bold rounded-[28px] uppercase hover:bg-secondary hover:text-texto transition"
+              class="text-xs bg-frontend text-secondary font-bold px-4 py-2 rounded-full uppercase hover:bg-secondary hover:text-texto transition"
               >patrocinar</button
             >
           </div>
@@ -364,11 +369,11 @@ import Data from '../components/data.jsx';
           <h3
             class="text-xl sm:text-4xl font-extrabold mt-4 mb-6 text-background leading-snug"
           >
-            Únete y forma parte <br /> de esta comunidad
+            Únete y forma parte de esta comunidad
           </h3>
 
           <form
-            class="flex flex-col sm:flex-row items-center sm:items-start gap-2 bg-texto rounded-full px-4 py-2 w-fit mx-auto md:mx-0"
+            class="flex flex-col sm:flex-row items-center sm:items-start gap-2 bg-texto rounded-full px-4 py-2 w-fit md:mx-0"
           >
             <input
               type="email"

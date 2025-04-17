@@ -1,9 +1,11 @@
 @import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
 
 @layer base {
 
     :root {
-        scroll-behavior: smooth;
 
         --nav-text: #633C77;
         --background: #211421;
@@ -12,11 +14,15 @@
         --frontend: #F9F051;
         --secondary:#B56EE1;
         --text-secundary:#8F8F8F;
+        
+        font-family: "Roboto", sans-serif;
+        font-optical-sizing: auto;
+        scroll-behavior: smooth;
 
     }
-    *{
-        outline: 1px solid limegreen;
-    }
+
+/* outline: 1px solid limegreen; */
+
 }
 
 
