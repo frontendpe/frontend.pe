@@ -1,19 +1,30 @@
+---
+import nav from '../assets/frontend.svg';
+---
+
 <nav
-  class="flex justify-between bg-background items-center text-texto px-12 py-8 fixed top-0 left-0 right-0 z-20"
+  class="flex flex-col bg-background text-texto fixed top-0 left-0 right-0 z-20"
 >
-  <h1 class="uppercase text-[40px] text-frontend font-impact">frontend</h1>
-  <ul class="uppercase hidden md:flex space-x-8 items-center font-semibold">
-    <li><a href="#inicio" class="hover:text-nav-bg">inicio</a></li>
-    <li><a href="#nosotros" class="hover:text-nav-bg">nosotros</a></li>
-    <li><a href="#meetups" class="hover:text-nav-bg">meetups</a></li>
-    <li><a href="#contacto" class="hover:text-nav-bg">contacto</a></li>
-    <li>
-      <a
-        href="/"
-        class="bg-nav-bg text-nav-text font-semibold px-5 py-4 rounded-full transition hover:bg-nav-text hover:text-nav-bg"
-      >
-        auspiciar
-      </a>
-    </li>
-  </ul>
+  <div
+    class="w-full h-10 bg-[url('../public/frame.png')] bg-repeat-x bg-top bg-contain"
+  >
+  </div>
+
+  <div class="flex justify-between items-center px-12 py-8">
+    <img src={nav.src} class="uppercase" />
+    <ul class="uppercase hidden md:flex space-x-8 items-center font-semibold">
+      <li><a href="#inicio" class="hover:text-nav-bg">inicio</a></li>
+      <li><a href="#nosotros" class="hover:text-nav-bg">nosotros</a></li>
+      <li><a href="#meetups" class="hover:text-nav-bg">meetups</a></li>
+      <li><a href="#contacto" class="hover:text-nav-bg">contacto</a></li>
+      <li>
+        <a
+          href="/"
+          class="bg-nav-bg text-nav-text font-semibold px-5 py-4 rounded-full transition hover:bg-nav-text hover:text-nav-bg"
+        >
+          auspiciar
+        </a>
+      </li>
+    </ul>
+  </div>
 </nav>
