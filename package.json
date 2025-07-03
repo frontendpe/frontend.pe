@@ -10,13 +10,16 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
-    "@tailwindcss/vite": "^4.1.3",
-    "@types/react": "^19.1.1",
     "@types/react-dom": "^19.1.2",
     "astro": "^5.11.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "tailwindcss": "^4.1.3"
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/react": "^19.1.2",
+    "react-feather": "^2.0.10",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^4.1.4"
   },
   "devDependencies": {
     "@svgr/cli": "^8.1.0"
