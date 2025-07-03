@@ -1,11 +1,11 @@
 //react
 export default function Data({ people }) {
     return (
-      <div className="flex flex-wrap justify-center font-extrabold gap-6 w-full">
-        {people.map((person, index) => ( //listado dinamico
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center font-extrabold gap-6 w-full">
+        {people.map((person, index) => (
           <div
-            key={index}
-            className="bg-nav-bg text-texto rounded-xl p-6 shadow-lg w-[350px]"
+            key={person.linkedIn}
+            className="bg-nav-bg text-people-card rounded-xl p-6 shadow-lg w-[350px]"
           >
             <h3 className="text-xl font-bold">{person.fullName}</h3>
             <p className="text-sm text-secondary">{person.handler}</p>

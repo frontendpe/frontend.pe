@@ -6,11 +6,16 @@
 
     --nav-text: #633c77;
     --background: #211421;
+    --nav-bg-pattern: rgba(33, 20, 33, 0.5);
     --nav-bg: #38ffe8;
     --texto: #ffffff;
     --frontend: #f9f051;
     --secondary: #b56ee1;
     --text-secundary: #8f8f8f;
+  }
+
+  body {
+    font-family: var(--font-family-sans);
   }
 }
 
@@ -18,8 +23,14 @@
   --color-background: var(--background);
   --color-frontend: var(--frontend);
   --color-nav-bg: var(--nav-bg);
+  --color-nav-bg-pattern: var(--nav-bg-pattern);
   --color-nav-text: var(--nav-text);
   --color-texto: var(--texto);
   --color-secondary: var(--secondary);
   --color-text-secundary: var(--text-secundary);
+  --color-people-card: #211421;
+  
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Roboto", ui-serif, Georgia, serif;
+  --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, monospace;
 }

@@ -1,39 +1,36 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import '../styles/global.css';
-import Nav from '../components/Nav.astro';
-import banner from '../assets/banner.png';
-import construccion from '../assets/construccion.png';
-import background from '../assets/background.png';
-import obj1 from '../assets/Group 2.svg';
-import obj2 from '../assets/Capa_1.svg';
-import obj3 from '../assets/Capa_2.svg';
-import fond2 from '../assets/fondo2.png';
-import foto from '../assets/meetups_foto.png';
-import persona from '../assets/persona.svg';
-import vector from '../assets/vector.svg';
-import stats from '../assets/stats.png';
-import people from '../data.json';
-import Data from '../components/data.jsx';
+import Nav from "../components/Nav.astro";
+import Layout from "../layouts/Layout.astro";
+import AboutUs from "../components/AboutUs.astro";
+
+import background from "../assets/background.png";
+import banner from "../assets/banner.png";
+import obj2 from "../assets/Capa_1.svg";
+import obj3 from "../assets/Capa_2.svg";
+import obj1 from "../assets/Group 2.svg";
+import foto from "../assets/meetups_foto.png";
+import stats from "../assets/stats.png";
+import People from "../components/People.jsx";
+import peopleData from "../data.json";
+
+import "../styles/global.css";
 ---
 
 <Layout>
-  <main class="bg-background text-texto font-sans flex flex-col gap-8">
+  <main
+    class="bg-background text-texto font-sans flex flex-col gap-8 bg-[url('../assets/bg-pattern.png')] bg-size-[auto_30px] bg-repeat-x pt-10"
+  >
     <Nav />
     <!-- Inicio -->
     <section
       id="inicio"
-      class="flex flex-col items-center text-center pt-40 gap-12 py-8 px-6"
+      class="flex flex-col items-center text-center pt-20 sm:pt-32 md:pt-40 gap-8 sm:gap-12 py-8 px-4 sm:px-6"
     >
-      <h2 class="text-nav-bg md:text-base tracking-widest uppercase">
-        el futuro se programa línea por línea.
-      </h2>
-      <a
-        href="#nosotros"
-        class="bg-nav-bg text-nav-text font-bold py-3 px-3 rounded-full transition duration-300 hover:bg-nav-text hover:text-nav-bg uppercase"
+      <h2
+        class="text-sm sm:text-base md:text-2xl tracking-widest uppercase text-nav-bg"
       >
-        hazlo posible
-      </a>
+        El futuro se programa línea por línea.
+      </h2>
       <div class="w-full">
         <img
           src={banner.src}
@@ -42,51 +39,35 @@ import Data from '../components/data.jsx';
       </div>
     </section>
 
-    <!-- Nosotros -->
-    <section
-      id="nosotros"
-      class="flex flex-col md:flex-row justify-center items-center gap-10 max-w-6xl mx-auto py-16 p-6"
-    >
-      <img src={construccion.src} class="w-72 md:w-[420px]" />
-      <div class="max-w-lg text-center md:text-left">
-        <h3 class="text-3xl font-bold text-nav-bg mb-4">¿Quiénes somos?</h3>
-        <p class="leading-relaxed text-texto mb-6 font-semibold">
-          Frontend nace con el compromiso de fortalecer el ecosistema del
-          desarrollo de software en el Perú, integrando la cultura del Perú con
-          la innovación tecnológica. Queremos representar el crecimiento digital
-          del país sin perder nuestras raíces, inspirándonos en los elementos
-          que definen la identidad peruana en su esencia más auténtica.
-        </p>
-        <a
-          href="/"
-          class="border-2 border-nav-bg px-5 py-2 rounded-full text-nav-bg font-bold hover:bg-nav-bg hover:text-background transition uppercase"
-        >
-          formar parte
-        </a>
-      </div>
-    </section>
+    <AboutUs />
 
     <!-- Objetivos -->
     <section
-      class="flex flex-col relative justify-center items-center gap-10 w-full overflow-hidden py-16"
+      class="flex flex-col relative justify-center items-center gap-8 sm:gap-10 w-full overflow-hidden py-12 sm:py-16"
     >
       <img
         src={background.src}
         class="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
-      <div class="relative z-10 flex flex-col items-center text-center p-6">
-        <h3 class="text-3xl font-bold text-texto mb-10">Nuestros objetivos</h3>
+      <div
+        class="relative z-10 flex flex-col items-center text-center px-4 sm:px-6"
+      >
+        <h3 class="text-2xl sm:text-3xl font-bold text-texto mb-8 sm:mb-10">
+          Nuestros objetivos
+        </h3>
         <div
-          class="flex flex-col md:flex-row gap-10 md:gap-8 justify-center items-stretch max-w-5xl"
+          class="flex flex-col lg:flex-row gap-8 sm:gap-10 justify-center items-stretch max-w-5xl"
         >
           <!-- Objetivo 1 -->
           <div class="flex flex-col items-center text-center">
             <div
               class="bg-nav-bg p-4 rounded-xl mb-4 flex items-center justify-center"
             >
-              <img src={obj1.src} class="w-16 h-16" />
+              <img src={obj1.src} class="w-12 h-12 sm:w-16 sm:h-16" />
             </div>
-            <p class="text-texto font-semibold leading-relaxed">
+            <p
+              class="text-texto font-semibold leading-relaxed text-sm sm:text-base"
+            >
               Difundir las tecnologías Web Front-end en el ámbito tecnológico y
               emprendimientos a nivel nacional.
             </p>
@@ -97,9 +78,11 @@ import Data from '../components/data.jsx';
             <div
               class="bg-nav-bg p-4 rounded-xl mb-4 flex items-center justify-center"
             >
-              <img src={obj2.src} class="w-16 h-16" />
+              <img src={obj2.src} class="w-12 h-12 sm:w-16 sm:h-16" />
             </div>
-            <p class="text-texto font-semibold leading-relaxed">
+            <p
+              class="text-texto font-semibold leading-relaxed text-sm sm:text-base"
+            >
               Permitir a los profesionales y emprendedores del país el
               desarrollo de sus actividades usando herramientas y procedimientos
               actuales.
@@ -111,9 +94,11 @@ import Data from '../components/data.jsx';
             <div
               class="bg-nav-bg p-4 rounded-xl mb-4 flex items-center justify-center"
             >
-              <img src={obj3.src} class="w-16 h-16" />
+              <img src={obj3.src} class="w-12 h-12 sm:w-16 sm:h-16" />
             </div>
-            <p class="text-texto font-semibold leading-relaxed">
+            <p
+              class="text-texto font-semibold leading-relaxed text-sm sm:text-base"
+            >
               Contribuir con nuestra sociedad en compartir conocimiento,
               emprendimiento, tecnología y networking.
             </p>
@@ -123,17 +108,19 @@ import Data from '../components/data.jsx';
     </section>
 
     <!-- meetups -->
-    <section id="meetups" class="text-texto py-16">
+    <section id="meetups" class="text-texto py-12 sm:py-16">
       <div
-        class="flex flex-col md:flex-row max-w-6xl mx-auto gap-12 items-center p-6"
+        class="flex flex-col lg:flex-row max-w-6xl mx-auto gap-8 sm:gap-12 items-center px-4 sm:px-6"
       >
         <div>
-          <h3 class="text-nav-bg text-2xl font-bold uppercase mb-2">meetups</h3>
-          <h2 class="w-[400px] text-3xl md:text-3xl font-bold mb-6">
+          <h3 class="text-nav-bg text-xl sm:text-2xl font-bold uppercase mb-2">
+            meetups
+          </h3>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-6 max-w-md sm:max-w-lg">
             Impulsando el Desarrollo Web en Perú
           </h2>
 
-          <div class="grid md:grid-cols-2 space-y-6 md:gap-12">
+          <div class="grid sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
             <div class="flex flex-col items-start gap-4">
               <div class="text-secondary">
                 <svg
@@ -159,10 +146,12 @@ import Data from '../components/data.jsx';
                 </svg>
               </div>
               <div>
-                <h4 class="text-4xl font-bold text-nav-bg mb-1">
+                <h4
+                  class="text-2xl sm:text-3xl md:text-4xl font-bold text-nav-bg mb-1"
+                >
                   Espacio de Integración
                 </h4>
-                <p class="text-texto">
+                <p class="text-texto text-sm sm:text-base">
                   Desde 2012, estas reuniones conectan desarrolladores y
                   fortalecen el ecosistema Web en Perú.
                 </p>
@@ -193,10 +182,12 @@ import Data from '../components/data.jsx';
                 </svg>
               </div>
               <div>
-                <h4 class="text-4xl font-bold text-nav-bg mb-1">
+                <h4
+                  class="text-2xl sm:text-3xl md:text-4xl font-bold text-nav-bg mb-1"
+                >
                   Crecimiento y Alcance
                 </h4>
-                <p class="text-texto">
+                <p class="text-texto text-sm sm:text-base">
                   Encuentros que proporcionan las bases para desarrollar
                   habilidades prácticas y mejorar la colaboración.
                 </p>
@@ -205,211 +196,23 @@ import Data from '../components/data.jsx';
           </div>
         </div>
         <div>
-          <img src={foto.src} class="w-72 md:w-[820px]" />
+          <img src={foto.src} class="w-64 sm:w-72 md:w-96 lg:w-[820px]" />
         </div>
       </div>
     </section>
-    <!-- auspicio -->
 
-    <section
-      class="flex flex-col relative justify-center items-center gap-4 w-full overflow-hidden py-16"
-    >
-      <!-- Fondo -->
-      <img
-        src={fond2.src}
-        class="absolute inset-0 w-full h-full object-cover z-0"
-      />
-
-      <h2 class="text-3xl font-bold mb-12 z-10 text-center">
-        Programa de auspicio
-      </h2>
-
-      <div
-        class="relative z-10 flex flex-col md:flex-row gap-10 md:gap-8 justify-center p-6"
-      >
-        <!-- 3 Meses -->
-        <div
-          class="w-[278px] h-[290px] bg-texto border-[4px] border-secondary rounded-2xl p-6 flex flex-col items-center text-center"
-        >
-          <div
-            class="flex items-center justify-center bg-secondary text-texto font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-[42px] uppercase"
-          >
-            3 meses
-          </div>
-          <div class="mt-6 mb-4">
-            <div
-              class="bg-secondary text-texto text-[32px] font-bold flex items-center justify-center w-[106px] h-[66px] rounded-[90px]"
-            >
-              $150
-            </div>
-          </div>
-          <ul
-            class="w-[230px] h-[80px] text-xs text-text-secundary space-y-3 mb-6 flex flex-col"
-          >
-            <li>
-              Publicación del logo de su empresa en medios web y anuncios del
-              evento en nuestros canales.
-            </li>
-            <li>Tamaño de Logo: S</li>
-          </ul>
-          <div class="mt-auto">
-            <button
-              class="bg-secondary text-texto text-xs font-bold w-[99px] h-[39px] rounded-[28px] uppercase hover:bg-nav-bg hover:text-secondary transition"
-              >patrocionar
-            </button>
-          </div>
-        </div>
-
-        <!-- 6 Meses -->
-        <div
-          class="w-[278px] h-[491px] bg-texto border-[4px] border-nav-bg rounded-2xl p-6 flex flex-col items-center text-center"
-        >
-          <div
-            class="bg-nav-bg text-secondary font-bold w-[168px] h-[34px] rounded-[90px] -mt-[42px] uppercase text-center flex items-center justify-center"
-          >
-            6 meses
-          </div>
-          <div class="mt-6 mb-4">
-            <div
-              class="bg-nav-bg text-secondary text-[32px] font-bold flex items-center justify-center w-[106px] h-[66px] rounded-[90px]"
-            >
-              $300
-            </div>
-          </div>
-          <ul
-            class="w-[230px] h-[288px] text-xs text-text-secundary space-y-2 mb-4 flex flex-col"
-          >
-            <li>
-              Publicación del logo de su empresa en medios web y anuncios del
-              evento en nuestros canales.
-            </li>
-            <li>Tamaño de Logo: M</li>
-            <li>
-              Impresión del logo en polos del grupo (parte trasera, por
-              edición).
-            </li>
-            <li>Presentación de la empresa durante el meetup: 2 min.</li>
-            <li>
-              Difusión de publicidad (merchandising, afiches, volantes, etc.).
-            </li>
-            <li>Sorteos de productos/servicios de auspiciadores.</li>
-            <li>Menciones de agradecimiento en apertura y cierre.</li>
-          </ul>
-          <div class="mt-auto">
-            <button
-              class="w-[99px] h-[39px] text-xs bg-nav-bg text-secondary font-bold rounded-[28px] uppercase hover:bg-frontend hover:text-secondary transition"
-              >patrocinar</button
-            >
-          </div>
-        </div>
-
-        <!-- 1 año -->
-        <div
-          class="w-[278px] h-[551px] bg-texto border-[4px] border-frontend rounded-2xl p-6 flex flex-col items-center text-center"
-        >
-          <div
-            class="flex items-center justify-center bg-frontend text-secondary font-bold py-2 px-6 w-[168px] h-[34px] rounded-[90px] -mt-[42px] uppercase"
-          >
-            1 año
-          </div>
-          <div class="mt-6 mb-4">
-            <div
-              class="bg-frontend text-secondary text-[32px] font-bold flex items-center justify-center w-[106px] h-[66px] rounded-[90px]"
-            >
-              $500
-            </div>
-          </div>
-          <ul
-            class="w-[230px] h-[382px] text-xs text-text-secundary space-y-2 mb-4 flex flex-col"
-          >
-            <li>
-              Publicación del logo de su empresa en medios web y anuncios del
-              evento en nuestros canales.
-            </li>
-            <li>Tamaño de Logo: L</li>
-            <li>
-              Impresión del logo en polos del grupo (parte trasera, por
-              edición).
-            </li>
-            <li>Cantidad de banners en la instalación del evento: 1.</li>
-            <li>Sesión de 25 min en el evento de negocios o desarrollo.</li>
-            <li>Presentación de la empresa durante el meetup: 5 min.</li>
-            <li>
-              Difusión de publicidad (merchandising, afiches, volantes, etc.).
-            </li>
-            <li>Sorteos de productos/servicios de auspiciadores.</li>
-            <li>Menciones de agradecimiento en apertura y cierre.</li>
-          </ul>
-          <div class="mt-auto">
-            <button
-              class="w-[99px] h-[39px] text-xs bg-frontend text-secondary font-bold rounded-[28px] uppercase hover:bg-secondary hover:text-texto transition"
-              >patrocinar</button
-            >
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- contacto -->
-    <section
-      id="contacto"
-      class="relative px-20 py-20 sm:px-8 md:px-20 z-0 w-full overflow-hidden"
-    >
-      <div
-        class="relative bg-frontend px-6 sm:px-12 md:px-20 py-10 max-w-[1500px] h-[350px] mx-auto flex flex-col md:flex-row items-center justify-between gap-40 overflow-visible"
-      >
-        <div class="md:w-1/2 text-center md:text-left">
-          <span class="text-xl font-bold text-texto bg-nav-bg px-4 py-2">
-            ¡Suscríbete!
-          </span>
-          <h3
-            class="text-xl sm:text-4xl font-extrabold mt-4 mb-6 text-background leading-snug"
-          >
-            Únete y forma parte <br /> de esta comunidad
-          </h3>
-
-          <form
-            class="flex flex-col sm:flex-row items-center sm:items-start gap-2 bg-texto rounded-full px-4 py-2 w-fit mx-auto md:mx-0"
-          >
-            <input
-              type="email"
-              placeholder="Ingresar correo"
-              class="rounded-full px-2 py-2 w-[220px] text-black placeholder-gray-500 focus:outline-none text-sm"
-            />
-            <button
-              type="submit"
-              class="ml-2 w-[99px] h-[39px] bg-secondary text-texto text-xs font-bold rounded-full uppercase hover:bg-nav-bg hover:text-secondary transition"
-            >
-              suscribirse
-            </button>
-          </form>
-        </div>
-        <div
-          class="md:w-1/2 flex justify-center overflow-visible relative z-30"
-        >
-          <img
-            src={persona.src}
-            alt="persona"
-            class="absolute top-1/2 -translate-y-1/2 w-[500px] h-[700px] object-contain z-30"
-          />
-        </div>
-
-        <img
-          src={vector.src}
-          alt="vector"
-          class="absolute bottom-0 left-0 w-full z-10"
-        />
-      </div>
-    </section>
     <!-- final -->
     <section
-      class="flex flex-col relative justify-center items-center gap-10 w-full overflow-hidden py-16"
+      class="flex flex-col relative justify-center items-center gap-8 sm:gap-10 w-full overflow-hidden py-12 sm:py-16"
     >
       <img
         src={stats.src}
         class="absolute top-0 left-0 w-full h-full object-cover z-0"
       />
-      <div class="relative z-10 flex flex-col items-center text-center p-6">
-        <h3 class="text-[40px] font-bold mb-10">
+      <div
+        class="relative z-10 flex flex-col items-center text-center px-4 sm:px-6"
+      >
+        <h3 class="text-2xl sm:text-3xl md:text-[40px] font-bold mb-8 sm:mb-10">
           <span class="text-nav-bg">11,700+</span>
           <span class="text-nav-text">en Facebook</span>
           <span class="text-nav-bg">/1500+</span>
@@ -425,11 +228,13 @@ import Data from '../components/data.jsx';
     <!-- tarjetas de presentacion -->
 
     <section
-      class="flex flex-col items-center justify-center w-full p-6 sm:px-6 md:px-20 py-8 gap-8"
+      class="flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-20 py-8 sm:py-12 gap-6 sm:gap-8"
     >
-      <h2 class="text-3xl font-bold text-center">Miembros de la Comunidad</h2>
+      <h2 class="text-2xl sm:text-3xl font-bold text-center">
+        Miembros de la Comunidad
+      </h2>
       <div class="w-full justify-center">
-        <Data client:load people={people} />
+        <People client:load people={peopleData} />
       </div>
     </section>
   </main>

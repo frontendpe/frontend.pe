@@ -1,19 +1,28 @@
+---
+import MobileNav from "./MobileNav";
+---
+
 <nav
-  class="flex justify-between bg-background items-center text-texto px-6 md:px-6 py-2 fixed top-0 left-0 right-0 z-20"
+  class="flex justify-between bg-nav-bg-pattern items-center text-texto px-6 md:px-6 py-6 sticky top-0 left-0 right-0 z-20 backdrop-blur-sm"
 >
-  <h1 class="uppercase text-[40px] font-extrabold text-frontend">frontend</h1>
-  <ul class="uppercase hidden md:flex space-x-5 items-center font-semibold">
-    <li><a href="#inicio" class="hover:text-nav-bg">inicio</a></li>
-    <li><a href="#nosotros" class="hover:text-nav-bg">nosotros</a></li>
-    <li><a href="#meetups" class="hover:text-nav-bg">meetups</a></li>
-    <li><a href="#contacto" class="hover:text-nav-bg">contacto</a></li>
+  <a href="/" class="uppercase text-[40px] font-extrabold text-frontend">
+    <img src="/frontendpe-logo.svg" alt="logo" class="w-auto h-16 md:h-20" />
+  </a>
+
+  <ul class="uppercase hidden md:flex gap-10 items-center font-semibold">
+    <li><a href="#inicio" class="text-xl hover:text-nav-bg">inicio</a></li>
+    <li><a href="#nosotros" class="text-xl hover:text-nav-bg">nosotros</a></li>
+    <li><a href="#meetups" class="text-xl hover:text-nav-bg">meetups</a></li>
+    <li><a href="#contacto" class="text-xl hover:text-nav-bg">contacto</a></li>
     <li>
       <a
         href="/"
-        class="bg-nav-bg text-nav-text font-semibold px-5 py-2 rounded-full transition hover:bg-nav-text hover:text-nav-bg"
+        class="bg-nav-bg text-xl text-nav-text font-semibold px-5 py-2 rounded-full transition hover:bg-nav-text hover:text-nav-bg"
       >
         auspiciar
       </a>
     </li>
   </ul>
+
+  <MobileNav client:load />
 </nav>
