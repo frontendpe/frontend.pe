@@ -1,25 +1,27 @@
 {
-    "name": "frontendpe-blog",
-    "version": "1.0.0",
-    "description": "Web de la comunidad",
-    "author": "erik@porroa.com",
-    "license": "MIT",
-    "scripts": {
-        "start": "concurrently \"npm run watch:tailwind\" \"npm run watch:hugo\"",
-        "build": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css && hugo --minify",
-        "watch:tailwind": "tailwindcss -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css --watch ",
-        "watch:hugo": "hugo server",
-        "example": "concurrently \"npm run example:tailwind\" \"npm run example:hugo\"",
-        "example:tailwind": "tailwindcss -c tailwind.config.example.js -i ./assets/css/tailwind.css -o ./assets/css/dist/style.css --watch",
-        "example:hugo": "hugo server --themesDir ../.."
-    },
-    "dependencies": {
-        "@tailwindcss/typography": "^0.5.0",
-        "concurrently": "^7.0.0",
-        "postcss": "^8.4.13",
-        "postcss-cli": "^9.1.0",
-        "prettier": "^2.5.1",
-        "prettier-plugin-go-template": "0.0.11",
-        "tailwindcss": "^3.0.15"
-    }
+  "name": "frontend.pe",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^4.3.0",
+    "@types/react-dom": "^19.1.2",
+    "astro": "^5.11.0",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "@tailwindcss/vite": "^4.1.4",
+    "@types/react": "^19.1.2",
+    "react-feather": "^2.0.10",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "tailwindcss": "^4.1.4"
+  },
+  "devDependencies": {
+    "@svgr/cli": "^8.1.0"
+  }
 }

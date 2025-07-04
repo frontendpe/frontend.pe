@@ -1,0 +1,243 @@
+---
+import Nav from "../components/Nav.astro";
+import Layout from "../layouts/Layout.astro";
+import AboutUs from "../components/AboutUs.astro";
+
+import banner from "../assets/banner.png";
+import obj2 from "../assets/Capa_1.svg";
+import obj3 from "../assets/Capa_2.svg";
+import obj1 from "../assets/Group 2.svg";
+import foto from "../assets/meetups_foto.png";
+import stats from "../assets/stats.png";
+import People from "../components/People.jsx";
+import peopleData from "../data.json";
+
+import "../styles/global.css";
+---
+
+<Layout>
+  <main
+    class="bg-background text-texto font-sans flex flex-col gap-8 bg-[url('../assets/bg-pattern.png')] bg-size-[auto_30px] bg-repeat-x pt-10"
+  >
+    <Nav />
+    <!-- Inicio -->
+    <section
+      id="inicio"
+      class="flex flex-col items-center text-center pt-20 sm:pt-32 md:pt-40 gap-8 sm:gap-12 py-8 px-4 sm:px-6"
+    >
+      <h2
+        class="text-sm sm:text-base md:text-2xl tracking-widest uppercase text-nav-bg"
+      >
+        El futuro se programa línea por línea.
+      </h2>
+      <div class="w-full">
+        <img
+          src={banner.src}
+          class="w-full object-contain md:object-cover object-center"
+        />
+      </div>
+    </section>
+
+    <AboutUs />
+
+    <!-- Objetivos -->
+    <section
+      class="flex flex-col relative justify-center items-center gap-8 sm:gap-10 w-full overflow-hidden py-12 sm:py-16"
+    >
+      <img
+        src={pattern.src}
+        class="absolute inset-0 w-full h-full object-cover z-0"
+        alt="Fondo decorativo"
+      />
+      <div
+        class="relative z-10 flex flex-col items-center text-center px-4 sm:px-6"
+      >
+        <h3 class="text-2xl sm:text-3xl font-bold text-texto mb-8 sm:mb-10">
+          Nuestros objetivos
+        </h3>
+        <div
+          class="flex flex-col lg:flex-row gap-8 sm:gap-10 justify-center items-stretch max-w-5xl"
+        >
+          <!-- Objetivo 1 -->
+          <div class="flex flex-col items-center text-center h-full px-4">
+            <div
+              class="bg-nav-bg p-3 rounded-sm flex items-center justify-center mb-6"
+            >
+              <img src={obj1.src} class="w-12 h-12 sm:w-16 sm:h-16" />
+            </div>
+            <p
+              class="text-texto font-semibold leading-relaxed text-sm sm:text-base"
+            >
+              Difundir las tecnologías Web Front-end en el ámbito tecnológico y
+              emprendimientos a nivel nacional.
+            </p>
+          </div>
+
+          <!-- Objetivo 2 -->
+          <div class="flex flex-col items-center text-center h-full px-4">
+            <div
+              class="bg-nav-bg p-3 rounded-sm flex items-center justify-center mb-6"
+            >
+              <img src={obj2.src} class="w-12 h-12 sm:w-16 sm:h-16" />
+            </div>
+            <p
+              class="text-texto font-semibold leading-relaxed text-sm sm:text-base"
+            >
+              Permitir a los profesionales y emprendedores del país el
+              desarrollo de sus actividades usando herramientas y procedimientos
+              actuales.
+            </p>
+          </div>
+
+          <!-- Objetivo 3 -->
+          <div class="flex flex-col items-center text-center h-full px-4">
+            <div
+              class="bg-nav-bg p-3 rounded-sm flex items-center justify-center mb-6"
+            >
+              <img src={obj3.src} class="w-12 h-12 sm:w-16 sm:h-16" />
+            </div>
+            <p
+              class="text-texto font-semibold leading-relaxed text-sm sm:text-base"
+            >
+              Contribuir con nuestra sociedad en compartir conocimiento,
+              emprendimiento, tecnología y networking.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- meetups -->
+    <section id="meetups" class="text-texto py-12 sm:py-16">
+      <div
+        class="flex flex-col lg:flex-row max-w-6xl mx-auto gap-8 sm:gap-12 items-center px-4 sm:px-6"
+      >
+        <div>
+          <h3 class="text-nav-bg text-xl sm:text-2xl font-bold uppercase mb-2">
+            meetups
+          </h3>
+          <h2 class="text-2xl sm:text-3xl font-bold mb-6 max-w-md sm:max-w-lg">
+            Impulsando el Desarrollo Web en Perú
+          </h2>
+
+          <div class="grid sm:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+            <div class="flex flex-col items-start gap-4">
+              <div class="text-secondary">
+                <svg
+                  width="23"
+                  height="23"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_80_1380)">
+                    <path
+                      d="M0 12.175C0 11.7265 0 11.2765 0 10.828C0.0135012 10.7485 0.0300026 10.669 0.0420037 10.5895C0.11401 10.0946 0.154513 9.59209 0.261023 9.10461C0.861075 6.34473 2.2787 4.08133 4.52889 2.3774C7.32814 0.257992 10.4799 -0.445478 13.9167 0.271491C16.6679 0.844466 18.9046 2.2859 20.6148 4.51031C22.4615 6.9102 23.231 9.64458 22.9415 12.6535C22.7075 15.0908 21.7609 17.2433 20.1362 19.0807C18.3556 21.0951 16.1354 22.349 13.4847 22.8215C13.0511 22.898 12.6131 22.9415 12.1766 23H10.8294C10.7709 22.988 10.7139 22.967 10.6554 22.9625C8.85677 22.835 7.17362 22.3205 5.63749 21.3801C2.65673 19.5547 0.822071 16.9238 0.178516 13.4799C0.0990086 13.0494 0.0585051 12.61 0 12.175ZM9.76735 13.3629C9.66834 13.2699 9.61434 13.2204 9.56183 13.1679C8.81477 12.4225 8.0692 11.6755 7.32214 10.9315C7.23213 10.8415 7.13912 10.7545 7.04011 10.675C6.38005 10.1396 5.36297 10.2416 4.81842 10.8955C4.23787 11.593 4.29637 12.4975 4.97293 13.1769C6.13553 14.3424 7.30114 15.5063 8.46524 16.6688C9.25581 17.4592 10.2009 17.4592 10.993 16.6688C13.3227 14.3409 15.6509 12.013 17.9776 9.68508C18.0781 9.58459 18.1741 9.47959 18.2611 9.3671C18.9166 8.51213 18.4951 7.19669 17.466 6.8757C16.779 6.66271 16.2059 6.85771 15.7094 7.35568C13.7787 9.2891 11.8465 11.218 9.91586 13.1514C9.85886 13.2084 9.81985 13.2864 9.76735 13.3644V13.3629Z"
+                      fill="#B56EE1"></path>
+                    <path
+                      d="M9.76725 13.3629C9.82126 13.2849 9.85876 13.2084 9.91576 13.1499C11.8464 11.2165 13.7786 9.28758 15.7093 7.35416C16.2058 6.85618 16.7789 6.66119 17.4659 6.87418C18.495 7.19367 18.915 8.51061 18.261 9.36557C18.1755 9.47807 18.078 9.58306 17.9775 9.68356C15.6493 12.013 13.3211 14.3409 10.9929 16.6673C10.2008 17.4577 9.25721 17.4577 8.46514 16.6673C7.30104 15.5033 6.13544 14.3409 4.97284 13.1754C4.29628 12.4974 4.23927 11.5915 4.81832 10.894C5.36287 10.2415 6.37996 10.1395 7.04002 10.6735C7.13902 10.753 7.23203 10.84 7.32204 10.93C8.06911 11.6755 8.81467 12.4209 9.56173 13.1664C9.61424 13.2174 9.66824 13.2669 9.76725 13.3614V13.3629Z"
+                      fill="white"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_80_1380">
+                      <rect width="23" height="23" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div>
+                <h4
+                  class="text-2xl sm:text-3xl md:text-4xl font-bold text-nav-bg mb-1"
+                >
+                  Espacio de Integración
+                </h4>
+                <p class="text-texto text-sm sm:text-base">
+                  Desde 2012, estas reuniones conectan desarrolladores y
+                  fortalecen el ecosistema Web en Perú.
+                </p>
+              </div>
+            </div>
+
+            <!-- Bloque 2 -->
+            <div class="flex flex-col items-start gap-4">
+              <div class="text-frontend">
+                <svg
+                  width="23"
+                  height="23"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <g clip-path="url(#clip0_80_1380)">
+                    <path
+                      d="M0 12.175C0 11.7265 0 11.2765 0 10.828C0.0135012 10.7485 0.0300026 10.669 0.0420037 10.5895C0.11401 10.0946 0.154513 9.59209 0.261023 9.10461C0.861075 6.34473 2.2787 4.08133 4.52889 2.3774C7.32814 0.257992 10.4799 -0.445478 13.9167 0.271491C16.6679 0.844466 18.9046 2.2859 20.6148 4.51031C22.4615 6.9102 23.231 9.64458 22.9415 12.6535C22.7075 15.0908 21.7609 17.2433 20.1362 19.0807C18.3556 21.0951 16.1354 22.349 13.4847 22.8215C13.0511 22.898 12.6131 22.9415 12.1766 23H10.8294C10.7709 22.988 10.7139 22.967 10.6554 22.9625C8.85677 22.835 7.17362 22.3205 5.63749 21.3801C2.65673 19.5547 0.822071 16.9238 0.178516 13.4799C0.0990086 13.0494 0.0585051 12.61 0 12.175ZM9.76735 13.3629C9.66834 13.2699 9.61434 13.2204 9.56183 13.1679C8.81477 12.4225 8.0692 11.6755 7.32214 10.9315C7.23213 10.8415 7.13912 10.7545 7.04011 10.675C6.38005 10.1396 5.36297 10.2416 4.81842 10.8955C4.23787 11.593 4.29637 12.4975 4.97293 13.1769C6.13553 14.3424 7.30114 15.5063 8.46524 16.6688C9.25581 17.4592 10.2009 17.4592 10.993 16.6688C13.3227 14.3409 15.6509 12.013 17.9776 9.68508C18.0781 9.58459 18.1741 9.47959 18.2611 9.3671C18.9166 8.51213 18.4951 7.19669 17.466 6.8757C16.779 6.66271 16.2059 6.85771 15.7094 7.35568C13.7787 9.2891 11.8465 11.218 9.91586 13.1514C9.85886 13.2084 9.81985 13.2864 9.76735 13.3644V13.3629Z"
+                      fill="#FFDD00"></path>
+                    <path
+                      d="M9.76725 13.3629C9.82126 13.2849 9.85876 13.2084 9.91576 13.1499C11.8464 11.2165 13.7786 9.28758 15.7093 7.35416C16.2058 6.85618 16.7789 6.66119 17.4659 6.87418C18.495 7.19367 18.915 8.51061 18.261 9.36557C18.1755 9.47807 18.078 9.58306 17.9775 9.68356C15.6493 12.013 13.3211 14.3409 10.9929 16.6673C10.2008 17.4577 9.25721 17.4577 8.46514 16.6673C7.30104 15.5033 6.13544 14.3409 4.97284 13.1754C4.29628 12.4974 4.23927 11.5915 4.81832 10.894C5.36287 10.2415 6.37996 10.1395 7.04002 10.6735C7.13902 10.753 7.23203 10.84 7.32204 10.93C8.06911 11.6755 8.81467 12.4209 9.56173 13.1664C9.61424 13.2174 9.66824 13.2669 9.76725 13.3614V13.3629Z"
+                      fill="white"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_80_1380">
+                      <rect width="23" height="23" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+              </div>
+              <div>
+                <h4
+                  class="text-2xl sm:text-3xl md:text-4xl font-bold text-nav-bg mb-1"
+                >
+                  Crecimiento y Alcance
+                </h4>
+                <p class="text-texto text-sm sm:text-base">
+                  Encuentros que proporcionan las bases para desarrollar
+                  habilidades prácticas y mejorar la colaboración.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <img src={foto.src} class="w-64 sm:w-72 md:w-96 lg:w-[820px]" />
+        </div>
+      </div>
+    </section>
+
+    <!-- final -->
+    <section
+      class="flex flex-col relative justify-center items-center gap-8 sm:gap-10 w-full overflow-hidden py-12 sm:py-16"
+    >
+      <img
+        src={stats.src}
+        class="absolute top-0 left-0 w-full h-full object-cover z-0"
+      />
+      <div
+        class="relative z-10 flex flex-col items-center text-center px-4 sm:px-6"
+      >
+        <h3 class="text-2xl sm:text-3xl md:text-[40px] font-bold mb-8 sm:mb-10">
+          <span class="text-nav-bg">11,700+</span>
+          <span class="text-nav-text">en Facebook</span>
+          <span class="text-nav-bg">/1500+</span>
+          <span class="text-nav-text">en Meetup.com</span>
+          <span class="text-nav-bg">/</span>
+          <br />
+          <span class="text-nav-text">promedio</span>
+          <span class="text-nav-bg">40</span>
+          <span class="text-nav-text">asistentes por meetup.</span>
+        </h3>
+      </div>
+    </section>
+
+    <!-- Tarjetas de presentacion -->
+    <section
+      class="flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-20 py-8 sm:py-12 gap-6 sm:gap-8"
+    >
+      <h2 class="text-2xl sm:text-3xl font-bold text-center">
+        Miembros de la Comunidad
+      </h2>
+      <div class="w-full justify-center">
+        <People client:load people={peopleData} />
+      </div>
+    </section>
+  </main>
+</Layout>

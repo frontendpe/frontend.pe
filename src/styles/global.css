@@ -1,0 +1,47 @@
+@import "tailwindcss";
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+
+@font-face {
+    font-family: 'impact';
+    src: url('/fonts/impact-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+@layer base {
+:root {
+  --nav-text: #633C77;
+  --background: #211421;
+  --nav-bg: #38FFE8;
+  --texto: #FFFFFF;
+  --frontend: #F9F051;
+  --secondary:#B56EE1;
+  --text-secundary:#8F8F8F;
+  font-optical-sizing: auto;
+  scroll-behavior: smooth;
+}
+
+  body {
+    font-family: var(--font-family-sans);
+  }
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-frontend: var(--frontend);
+  --color-nav-bg: var(--nav-bg);
+  --color-nav-bg-pattern: var(--nav-bg-pattern);
+  --color-nav-text: var(--nav-text);
+  --color-texto: var(--texto);
+  --color-secondary: var(--secondary);
+  --color-text-secundary: var(--text-secundary);
+  --color-people-card: #211421;
+  
+  --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Roboto", ui-serif, Georgia, serif;
+  --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
