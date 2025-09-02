@@ -3,22 +3,19 @@ import Nav from "../components/Nav.astro";
 import Layout from "../layouts/Layout.astro";
 import AboutUs from "../components/AboutUs.astro";
 
-import banner from "../assets/banner.png";
+import banner from "../assets/banner.svg";
 import obj2 from "../assets/Capa_1.svg";
 import obj3 from "../assets/Capa_2.svg";
 import obj1 from "../assets/Group 2.svg";
-import foto from "../assets/meetups_foto.png";
+import foto from "../assets/meetups-home.png";
 import stats from "../assets/stats.png";
-import People from "../components/People.jsx";
-import peopleData from "../data.json";
-import pattern from "../assets/bg-pattern.png";
 
 import "../styles/global.css";
 ---
 
 <Layout>
   <main
-    class="bg-background text-texto font-sans flex flex-col gap-8 bg-[url('../assets/bg-pattern.png')] bg-size-[auto_30px] bg-repeat-x pt-10"
+    class="bg-background text-texto font-sans flex flex-col gap-8 bg-pattern-repeat-x bg-pattern-size-auto pt-10"
   >
     <Nav />
     <!-- Inicio -->
@@ -43,13 +40,8 @@ import "../styles/global.css";
 
     <!-- Objetivos -->
     <section
-      class="flex flex-col relative justify-center items-center gap-8 sm:gap-10 w-full overflow-hidden py-12 sm:py-16"
+      class="flex flex-col relative justify-center items-center gap-8 sm:gap-10 w-full overflow-hidden py-12 sm:py-16 bg-pattern-2 bg-repeat"
     >
-      <img
-        src={pattern.src}
-        class="absolute inset-0 w-full h-full object-cover z-0"
-        alt="Fondo decorativo"
-      />
       <div
         class="relative z-10 flex flex-col items-center text-center px-4 sm:px-6"
       >
@@ -218,7 +210,7 @@ import "../styles/global.css";
         <h3 class="text-2xl sm:text-3xl md:text-[40px] font-bold mb-8 sm:mb-10">
           <span class="text-nav-bg">11,700+</span>
           <span class="text-nav-text">en Facebook</span>
-          <span class="text-nav-bg">/1500+</span>
+          <span class="text-nav-bg">/1700+</span>
           <span class="text-nav-text">en Meetup.com</span>
           <span class="text-nav-bg">/</span>
           <br />
@@ -226,18 +218,6 @@ import "../styles/global.css";
           <span class="text-nav-bg">40</span>
           <span class="text-nav-text">asistentes por meetup.</span>
         </h3>
-      </div>
-    </section>
-
-    <!-- Tarjetas de presentacion -->
-    <section
-      class="flex flex-col items-center justify-center w-full px-4 sm:px-6 md:px-20 py-8 sm:py-12 gap-6 sm:gap-8"
-    >
-      <h2 class="text-2xl sm:text-3xl font-bold text-center">
-        Miembros de la Comunidad
-      </h2>
-      <div class="w-full justify-center">
-        <People client:load people={peopleData} />
       </div>
     </section>
   </main>

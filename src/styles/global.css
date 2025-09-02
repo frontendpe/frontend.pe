@@ -43,5 +43,30 @@
   --font-sans: "Roboto", ui-sans-serif, system-ui, sans-serif;
   --font-serif: "Roboto", ui-serif, Georgia, serif;
   --font-mono: "Roboto Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --background-image-pattern: url('../assets/pattern.svg');
+  --background-image-pattern-2: url('../assets/pattern-2.svg');
+}
+
+@layer utilities {
+  .bg-pattern {
+    background-image: var(--background-image-pattern);
+  }
+  
+  .bg-pattern-2 {
+    background-image: var(--background-image-pattern-2);
+  }
+  
+  .bg-pattern-size-auto {
+    background-size: auto;
+  }
+  
+  .bg-pattern-size-cover {
+    background-size: cover;
+  }
+  
+  .bg-pattern-size-contain {
+    background-size: contain;
+  }
 }
 

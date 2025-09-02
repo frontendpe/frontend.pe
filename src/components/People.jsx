@@ -1,7 +1,9 @@
-export default function Data({ people }) {
+import peopleData from "../data.json";
+
+export default function Data() {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center font-extrabold gap-6 w-full">
-    {people.map((person, index) => (
+    {peopleData.map((person, index) => (
       <div
         key={person.linkedIn}
         className="bg-nav-bg text-people-card rounded-xl p-6 shadow-lg w-[350px]"
