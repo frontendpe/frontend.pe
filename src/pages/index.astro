@@ -11,11 +11,12 @@ import foto from "../assets/meetups-home.png";
 import stats from "../assets/stats.png";
 
 import "../styles/global.css";
+import BannerSvg from "../components/BannerSvg.astro";
 ---
 
 <Layout>
   <main
-    class="bg-background text-texto font-sans flex flex-col gap-8 bg-pattern-repeat-x bg-pattern-size-auto pt-10"
+    class="bg-background text-texto font-sans flex flex-col gap-8 bg-pattern-repeat-x bg-pattern-size-auto pt-10 overflow-hidden"
   >
     <Nav />
     <!-- Inicio -->
@@ -29,10 +30,7 @@ import "../styles/global.css";
         El futuro se programa línea por línea.
       </h2>
       <div class="w-full">
-        <img
-          src={banner.src}
-          class="w-full object-contain md:object-cover object-center"
-        />
+        <BannerSvg />
       </div>
     </section>
 
