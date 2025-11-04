@@ -687,7 +687,6 @@
     </g>
     <g id="Car">
       <path
-        fill="red"
         class="cls-4 cuerpo-car"
         d="M444.02,247.73h70.33c20.62,0,37.4,16.76,37.45,37.39h-23.12v-.58h0v.58h-.2c-.05-4.17-3.45-7.54-7.63-7.54-4.18,0-7.58,3.38-7.63,7.54h-65.18c-.05-4.17-3.45-7.54-7.63-7.54-4.18,0-7.58,3.38-7.63,7.54h-26.22c.05-20.62,16.83-37.39,37.45-37.39Z"
       ></path>
@@ -791,7 +790,7 @@
 <script>
   import gsap from "gsap";
   import { ScrollTrigger } from "gsap/ScrollTrigger";
-  import { DrawSVGPlugin } from "gsap/all";
+  import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 
   gsap.registerPlugin(ScrollTrigger, DrawSVGPlugin);
 
@@ -940,7 +939,7 @@
 
       gsap.ticker.add(tick);
 
-      function tick(_: any, dt: any) {
+      function tick(_: number, dt: number) {
         total -= dt * carVelocity.value * carVelocity.valueMultiplier;
         xTo(total);
         xToHitbox(total);
@@ -980,7 +979,6 @@
     const initCrossClick = () => {
       const crossHitbox = hitRects.cross as SVGGraphicsElement;
       const cross = svgGroup.cross as SVGGraphicsElement;
-  
       crossHitbox.addEventListener("click", () => {
         if (isAnimatingCross) return;
 
@@ -1021,7 +1019,6 @@
     const initLlamaClick = () => {
       const llamaHitbox = hitRects.llama as SVGGraphicsElement;
       const llama = svgGroup.llama as SVGGraphicsElement;
-  
       llamaHitbox.addEventListener("click", () => {
         if (isAnimatingLlama) return;
 
@@ -1060,7 +1057,6 @@
     const initHouseClick = () => {
       const houseHitbox = hitRects.house as SVGGraphicsElement;
       const house = svgGroup.houses as SVGGraphicsElement;
-  
       houseHitbox.addEventListener("click", () => {
         if (isAnimatingHouse) return;
 
@@ -1087,7 +1083,6 @@
     const initTreesClick = () => {
       const treesHitbox = hitRects.trees as SVGGraphicsElement;
       const trees = svgGroup.trees as SVGGraphicsElement;
-  
       treesHitbox.addEventListener("click", () => {
         if (isAnimatingTrees) return;
 
@@ -1114,7 +1109,6 @@
     const initPalmerClick = () => {
       const palmerHitbox = hitRects.palmer as SVGGraphicsElement;
       const palmer = svgGroup.palmer as SVGGraphicsElement;
-    
       palmerHitbox.addEventListener("click", () => {
         if (isAnimatingPalmer) return;
 
