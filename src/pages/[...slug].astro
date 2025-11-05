@@ -1,0 +1,159 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+
+export async function getStaticPaths() {
+  const pages = await getCollection('pages');
+  return pages.map((page) => ({
+    params: { slug: page.slug },
+    props: { page },
+  }));
+}
+
+interface Props {
+  page: CollectionEntry<'pages'>;
+}
+
+const { page } = Astro.props;
+const { Content } = await page.render();
+
+const LOCALE = 'es-PE';
+---
+
+<Layout>
+  <main class="bg-background text-texto font-sans flex flex-col gap-8 bg-pattern-repeat-x bg-pattern-size-auto pt-10 overflow-hidden">
+    <Nav />
+    
+    <article class="max-w-4xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+      <header class="mb-8 sm:mb-12">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-texto mb-4">
+          {page.data.title}
+        </h1>
+        {page.data.description && (
+          <p class="text-lg sm:text-xl text-texto/80">
+            {page.data.description}
+          </p>
+        )}
+        {page.data.publishDate && (
+          <time class="text-sm text-texto/60 mt-4 block">
+            {page.data.publishDate.toLocaleDateString(LOCALE, {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric',
+            })}
+          </time>
+        )}
+      </header>
+      
+      <div class="prose prose-lg max-w-none">
+        <Content />
+      </div>
+    </article>
+  </main>
+</Layout>
+
+<style is:global>
+  .prose {
+    --prose-code-bg: rgba(56, 255, 232, 0.1);
+    color: var(--texto);
+  }
+  
+  .prose h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: var(--nav-bg);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .prose h2 {
+      font-size: 2.25rem;
+    }
+  }
+  
+  .prose h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--nav-bg);
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  @media (min-width: 640px) {
+    .prose h3 {
+      font-size: 1.875rem;
+    }
+  }
+  
+  .prose h4 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--nav-bg);
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  @media (min-width: 640px) {
+    .prose h4 {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .prose p {
+    margin-bottom: 1rem;
+    line-height: 1.75;
+  }
+  
+  .prose ul, .prose ol {
+    margin-bottom: 1rem;
+    margin-left: 1.5rem;
+  }
+  
+  .prose li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .prose a {
+    color: var(--nav-bg);
+    text-decoration: underline;
+  }
+  
+  .prose a:hover {
+    color: var(--secondary);
+  }
+  
+  .prose code {
+    background-color: var(--prose-code-bg);
+    padding: 0.125rem 0.5rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+  }
+  
+  .prose pre {
+    background-color: var(--prose-code-bg);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+  }
+  
+  .prose blockquote {
+    border-left: 4px solid var(--nav-bg);
+    padding-left: 1rem;
+    font-style: italic;
+    margin: 1rem 0;
+  }
+  
+  .prose img {
+    border-radius: 0.5rem;
+    margin: 1.5rem 0;
+  }
+  
+  .prose strong {
+    font-weight: 700;
+    color: var(--nav-bg);
+  }
+</style>
