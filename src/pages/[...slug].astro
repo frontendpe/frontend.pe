@@ -18,6 +18,8 @@ interface Props {
 
 const { page } = Astro.props;
 const { Content } = await page.render();
+
+const LOCALE = 'es-PE';
 ---
 
 <Layout>
@@ -36,7 +38,7 @@ const { Content } = await page.render();
         )}
         {page.data.publishDate && (
           <time class="text-sm text-texto/60 mt-4 block">
-            {page.data.publishDate.toLocaleDateString('es-PE', {
+            {page.data.publishDate.toLocaleDateString(LOCALE, {
               year: 'numeric',
               month: 'long',
               day: 'numeric',
@@ -54,6 +56,7 @@ const { Content } = await page.render();
 
 <style is:global>
   .prose {
+    --prose-code-bg: rgba(56, 255, 232, 0.1);
     color: var(--texto);
   }
   
@@ -123,14 +126,14 @@ const { Content } = await page.render();
   }
   
   .prose code {
-    background-color: rgba(56, 255, 232, 0.1);
+    background-color: var(--prose-code-bg);
     padding: 0.125rem 0.5rem;
     border-radius: 0.25rem;
     font-size: 0.875rem;
   }
   
   .prose pre {
-    background-color: rgba(56, 255, 232, 0.1);
+    background-color: var(--prose-code-bg);
     padding: 1rem;
     border-radius: 0.5rem;
     overflow-x: auto;
