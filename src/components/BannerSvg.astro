@@ -6,7 +6,6 @@
   id="SVGRoot"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 1318.65 289.84"
-  style="overflow: visible;"
 >
   <defs>
     <style>
@@ -775,15 +774,23 @@
 <style>
   svg {
     width: 100%;
-    /* min-width: 1240px; */
+    min-width: 1440px;
     height: auto;
     display: block;
     margin: 0 auto;
+    overflow: visible;
+    padding-inline: 1rem;
   }
 
   #Hitboxes rect {
     cursor: pointer !important;
     /* fill: #00ff0088; */
+  }
+
+  @media (min-width: 768px) {
+    svg {
+      min-width: auto;
+    }
   }
 </style>
 
