@@ -22,10 +22,10 @@ import BannerSvg from "../components/BannerSvg.astro";
     <!-- Inicio -->
     <section
       id="inicio"
-      class="flex flex-col items-center text-center pt-20 sm:pt-32 md:pt-40 gap-8 sm:gap-12 py-8 "
+      class="flex flex-col items-center text-center pt-12 sm:pt-16 md:pt-24 gap-8 sm:gap-12 py-8 "
     >
       <h2
-        class="text-md sm:text-lg md:text-4xl tracking-widest uppercase text-nav-bg"
+        class="text-md sm:text-lg md:text-4xl tracking-widest uppercase text-nav-bg md:my-14 my-4 sm:my-8"
       >
         El futuro se programa línea por línea.
       </h2>
@@ -45,7 +45,7 @@ import BannerSvg from "../components/BannerSvg.astro";
       <div
         class="relative z-10 flex flex-col items-center text-center px-4 sm:px-6"
       >
-        <h3 class="text-2xl sm:text-3xl font-bold text-texto mb-8 sm:mb-10">
+        <h3 class="text-2xl sm:text-3xl font-bold text-texto mb-8 sm:mb-16">
           Nuestros objetivos
         </h3>
         <div
@@ -54,12 +54,12 @@ import BannerSvg from "../components/BannerSvg.astro";
           <!-- Objetivo 1 -->
           <div class="flex flex-col items-center text-center h-full px-4">
             <div
-              class="bg-nav-bg p-3 rounded-sm flex items-center justify-center mb-6"
+              class="bg-nav-bg p-3 rounded-md flex items-center justify-center mb-6"
             >
               <img src={obj1.src} class="w-12 h-12 sm:w-16 sm:h-16" />
             </div>
             <p
-              class="text-texto font-semibold leading-relaxed text-sm sm:text-base"
+              class="text-texto font-regular leading-relaxed text-sm sm:text-base"
             >
               Difundir las tecnologías Web Front-end en el ámbito tecnológico y
               emprendimientos a nivel nacional.
@@ -69,12 +69,12 @@ import BannerSvg from "../components/BannerSvg.astro";
           <!-- Objetivo 2 -->
           <div class="flex flex-col items-center text-center h-full px-4">
             <div
-              class="bg-nav-bg p-3 rounded-sm flex items-center justify-center mb-6"
+              class="bg-nav-bg p-3 rounded-md flex items-center justify-center mb-6"
             >
               <img src={obj2.src} class="w-12 h-12 sm:w-16 sm:h-16" />
             </div>
             <p
-              class="text-texto font-semibold leading-relaxed text-sm sm:text-base"
+              class="text-texto font-regular leading-relaxed text-sm sm:text-base"
             >
               Permitir a los profesionales y emprendedores del país el
               desarrollo de sus actividades usando herramientas y procedimientos
@@ -85,12 +85,12 @@ import BannerSvg from "../components/BannerSvg.astro";
           <!-- Objetivo 3 -->
           <div class="flex flex-col items-center text-center h-full px-4">
             <div
-              class="bg-nav-bg p-3 rounded-sm flex items-center justify-center mb-6"
+              class="bg-nav-bg p-3 rounded-md flex items-center justify-center mb-6"
             >
               <img src={obj3.src} class="w-12 h-12 sm:w-16 sm:h-16" />
             </div>
             <p
-              class="text-texto font-semibold leading-relaxed text-sm sm:text-base"
+              class="text-texto font-regular leading-relaxed text-sm sm:text-base"
             >
               Contribuir con nuestra sociedad en compartir conocimiento,
               emprendimiento, tecnología y networking.
@@ -101,7 +101,7 @@ import BannerSvg from "../components/BannerSvg.astro";
     </section>
 
     <!-- meetups -->
-    <section id="meetups" class="text-texto py-12 sm:py-16">
+    <section id="meetups" class="text-texto pt-12 sm:py-16">
       <div
         class="flex flex-col lg:flex-row max-w-6xl mx-auto gap-8 sm:gap-12 items-center px-4 sm:px-6"
       >
@@ -191,7 +191,7 @@ import BannerSvg from "../components/BannerSvg.astro";
           </div>
         </div>
         <div>
-          <img src={foto.src} class="w-64 sm:w-72 md:w-96 lg:w-[820px]" />
+          <img src={foto.src} class="w-full mt-10 sm:mt-0 sm:w-72 md:w-96 lg:w-[820px]" />
         </div>
       </div>
     </section>
