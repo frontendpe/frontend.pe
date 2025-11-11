@@ -1,9 +1,49 @@
 ---
 import "../styles/global.css";
+import frontendOgImage from "../assets/frontend.svg";
+
+const {
+  title = "Frontend.pe | Comunidad frontend del Perú",
+  description = "Frontend.pe impulsa el desarrollo web en Perú a través de meetups, talleres y networking para profesionales y entusiastas del frontend.",
+  keywords = [
+    "frontend",
+    "desarrollo web",
+    "comunidad tecnológica",
+    "meetups",
+    "JavaScript",
+    "CSS",
+    "HTML",
+    "Perú",
+  ],
+  image = frontendOgImage.src,
+  imageAlt = "Logotipo de Frontend.pe",
+  canonical,
+  locale = "es_PE",
+  noindex = false,
+  type = "website",
+  siteName = "Frontend.pe",
+  twitterCard = "summary_large_image",
+  twitterHandle,
+  structuredData,
+} = Astro.props;
+
+const currentUrl = Astro.url;
+const origin = Astro.site ?? `${currentUrl.protocol}//${currentUrl.host}`;
+const canonicalUrl =
+  canonical ?? new URL(`${currentUrl.pathname}${currentUrl.search}`, origin).toString();
+const ogImage =
+  image && image.startsWith("http")
+    ? image
+    : new URL(image ?? frontendOgImage.src, origin).toString();
+const robots = noindex ? "noindex, nofollow" : "index, follow";
+const keywordsContent = Array.isArray(keywords) ? keywords.join(", ") : keywords;
+const hasStructuredData =
+  typeof structuredData === "object" && structuredData !== null;
+const htmlLang = locale.includes("_") ? locale.replace("_", "-") : locale;
 ---
 
 <!doctype html>
-<html lang="es-PE">
+<html lang={htmlLang}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -30,7 +70,33 @@ import "../styles/global.css";
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
     />
     <meta name="generator" content={Astro.generator} />
-    <title>Frontend.pe</title>
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {keywordsContent && <meta name="keywords" content={keywordsContent} />}
+    <meta name="author" content={siteName} />
+    <meta name="robots" content={robots} />
+    <meta name="theme-color" content="#1f2937" />
+    <link rel="canonical" href={canonicalUrl} />
+    <meta property="og:type" content={type} />
+    <meta property="og:locale" content={locale} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={imageAlt} />
+    <meta name="twitter:card" content={twitterCard} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={imageAlt} />
+    {twitterHandle && <meta name="twitter:site" content={twitterHandle} />}
+    {hasStructuredData && (
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+    )}
+    <slot name="head" />
   </head>
   <body class="relative flex flex-col font-roboto">
     <slot />

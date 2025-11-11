@@ -20,7 +20,8 @@
     "react-feather": "^2.0.10",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
-    "tailwindcss": "^4.1.4"
+    "tailwindcss": "^4.1.4",
+    "vite": "^7.2.2"
   },
   "devDependencies": {
     "@svgr/cli": "^8.1.0"

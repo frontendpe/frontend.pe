@@ -9,12 +9,42 @@ import obj3 from "../assets/Capa_2.svg";
 import obj1 from "../assets/Group 2.svg";
 import foto from "../assets/meetups-home.png";
 import stats from "../assets/stats.png";
+import frontendOgImage from "../assets/frontend.svg";
 
 import "../styles/global.css";
 import BannerSvg from "../components/BannerSvg.astro";
+
+const homepageDescription =
+  "Frontend.pe impulsamos el desarrollo web en Perú a través de meetups, talleres y networking para profesionales, estudiantes y entusiastas de la tecnología.";
+const homepageKeywords = [
+  "frontend.pe",
+  "comunidad frontend",
+  "desarrollo web",
+  "meetups tech",
+  "frontend Perú",
+  "JavaScript Perú",
+  "HTML y CSS",
+  "tecnología en Perú",
+  "networking tecnológico",
+];
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Frontend.pe",
+  url: "https://frontend.pe",
+  description: homepageDescription,
+  inLanguage: "es-PE",
+};
 ---
 
-<Layout>
+<Layout
+  title="Frontend.pe | Comunidad frontend del Perú"
+  description={homepageDescription}
+  keywords={homepageKeywords}
+  image={frontendOgImage.src}
+  imageAlt="Comunidad Frontend.pe mostrando métricas de crecimiento"
+  structuredData={structuredData}
+>
   <main
     class="bg-background text-texto font-sans flex flex-col gap-8 bg-pattern-repeat-x bg-pattern-size-auto pt-10 overflow-hidden"
   >
