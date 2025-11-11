@@ -198,7 +198,7 @@ import BannerSvg from "../components/BannerSvg.astro";
 
     <!-- final -->
     <section
-      class="flex flex-col relative justify-center items-center gap-8 sm:gap-10 w-full overflow-hidden py-12 sm:py-16"
+      class="flex flex-col relative justify-center items-center gap-8 sm:gap-10 w-full overflow-hidden py-[120px] sm:py-[160px]"
     >
       <img
         src={stats.src}
@@ -207,19 +207,98 @@ import BannerSvg from "../components/BannerSvg.astro";
       <div
         class="relative z-10 flex flex-col items-center text-center px-4 sm:px-6"
       >
-        <h3 class="text-2xl sm:text-3xl md:text-[40px] font-bold mb-8 sm:mb-10">
+        <h3 class="text-2xl sm:text-3xl md:text-[40px] font-bold">
           <span class="text-nav-bg">11,700+</span>
-          <span class="text-nav-text">en Facebook</span>
-          <span class="text-nav-bg">/1700+</span>
-          <span class="text-nav-text">en Meetup.com</span>
+          <span class="text-nav-text">en 
+            <a 
+              href="https://www.facebook.com/groups/261865003878340"
+              target="_blank" rel="noopener noreferrer" class="text-nav-bg hover:underline">Facebook</a></span>
+          <span class="text-nav-bg">/ 1800+</span>
+          <span class="text-nav-text">en 
+            <a 
+              href="https://www.meetup.com/frontend-pe/"
+              target="_blank" rel="noopener noreferrer" class="text-nav-bg hover:underline">Meetup.com</a></span>
           <span class="text-nav-bg">/</span>
-          <br />
-          <span class="text-nav-text">promedio</span>
-          <span class="text-nav-bg">40</span>
+          <br class="hidden lg:block" />
+          <span class="text-nav-bg">40+</span>
           <span class="text-nav-text">asistentes por meetup.</span>
         </h3>
       </div>
     </section>
+
+    <footer class="bg-background/80 backdrop-blur-sm pt-2 pb-8 px-4">
+      <div
+        class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 text-center sm:flex-row sm:text-left"
+      >
+        <p class="text-lg font-bold uppercase text-nav-bg">Frontend.pe 2025</p>
+        <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:gap-4">
+          <a
+            href="https://www.facebook.com/groups/261865003878340"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-nav-bg text-nav-bg transition hover:bg-nav-bg hover:text-background"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="h-5 w-5"
+              aria-hidden="true"
+            >
+              <path
+                d="M22 12.07C22 6.48 17.52 2 11.93 2S1.86 6.48 1.86 12.07c0 4.99 3.64 9.13 8.4 9.93v-7.03H7.9v-2.9h2.36V9.83c0-2.33 1.39-3.62 3.52-3.62 1.02 0 2.09.18 2.09.18v2.3h-1.18c-1.17 0-1.54.73-1.54 1.48v1.77h2.62l-.42 2.9h-2.2V22c4.76-.8 8.4-4.94 8.4-9.93Z"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.meetup.com/frontend-pe/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-nav-bg text-nav-bg transition hover:bg-nav-bg hover:text-background"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              class="h-5 w-5"
+              aria-hidden="true"
+            >
+              <circle
+                cx="12"
+                cy="12"
+                r="9"
+                stroke="currentColor"
+                stroke-width="1.5"
+              />
+              <path
+                d="M7.25 14.2c0-2.28 1.26-3.9 3.04-3.9.98 0 1.82.46 2.26 1.28.44-.82 1.28-1.28 2.26-1.28 1.78 0 3.04 1.62 3.04 3.9V17h-1.82v-2.92c0-.88-.3-1.32-.94-1.32-.64 0-.96.44-.96 1.32V17h-1.82v-2.92c0-.88-.32-1.32-.96-1.32s-.94.44-.94 1.32V17H7.25v-2.8Z"
+                fill="currentColor"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.instagram.com/frontendpe/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex h-10 w-10 items-center justify-center rounded-full border border-nav-bg text-nav-bg transition hover:bg-nav-bg hover:text-background"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              class="h-5 w-5"
+              aria-hidden="true"
+            >
+              <path
+                d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5Zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7Zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11Zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm6-2.75a1.25 1.25 0 1 1-2.5 0 1.25 1.25 0 0 1 2.5 0Z"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
   </main>
 </Layout>
 
