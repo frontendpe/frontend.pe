@@ -25,11 +25,11 @@ import BannerSvg from "../components/BannerSvg.astro";
       class="flex flex-col items-center text-center pt-20 sm:pt-32 md:pt-40 gap-8 sm:gap-12 py-8 "
     >
       <h2
-        class="text-sm sm:text-base md:text-2xl tracking-widest uppercase text-nav-bg"
+        class="text-md sm:text-lg md:text-4xl tracking-widest uppercase text-nav-bg"
       >
         El futuro se programa línea por línea.
       </h2>
-      <div class="w-full overflow-x-auto">
+      <div class="w-full overflow-x-auto" data-banner-scroll>
         <div class="w-full pt-10">
           <BannerSvg />
         </div>
@@ -222,3 +222,14 @@ import BannerSvg from "../components/BannerSvg.astro";
     </section>
   </main>
 </Layout>
+
+<script>
+  if (typeof window !== "undefined") {
+    window.addEventListener("load", () => {
+      const bannerScroll = document.querySelector("[data-banner-scroll]");
+      if (bannerScroll instanceof HTMLElement) {
+        bannerScroll.scrollLeft = 520;
+      }
+    });
+  }
+</script>
