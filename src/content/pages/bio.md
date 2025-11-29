@@ -22,6 +22,14 @@ Síguenos en Instagram para contenido visual, stories de nuestros eventos y actu
 
 [Síguenos en Instagram](https://www.instagram.com/frontendpe/)
 
+### Github
+¿Deseas colaborar con algo de código?
+[Síguenos en Github](https://github.com/frontendpe/frontend.pe)
+
+## WhatsApp
+Únete a nuestro canal de WhatsApp
+[Acceder al grupo](https://chat.whatsapp.com/9NkQNfhz6sv0ex5ksdU9Jb)
+
 ---
 
 ## Call for Papers
